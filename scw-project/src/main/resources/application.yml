@@ -22,4 +22,7 @@ eureka:
     prefer-ip-address: true
 server:
   port: 8000
+  
+swagger2:
+  enable: true
 
