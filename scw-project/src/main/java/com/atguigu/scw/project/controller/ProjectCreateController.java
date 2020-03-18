@@ -10,16 +10,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.alibaba.fastjson.JSON;
+import com.atguigu.scw.enums.ProjectStatusEnume;
+import com.atguigu.scw.project.bean.TReturn;
 import com.atguigu.scw.project.component.OssTemplate;
 import com.atguigu.scw.project.constant.ProjectConstant;
+import com.atguigu.scw.project.service.TProjectService;
 import com.atguigu.scw.project.vo.req.BaseVo;
+import com.atguigu.scw.project.vo.req.ProjectBaseInfoVo;
 import com.atguigu.scw.project.vo.req.ProjectRedisStorageVo;
+import com.atguigu.scw.project.vo.req.ProjectReturnVo;
 import com.atguigu.scw.vo.resp.AppResponse;
 
 import io.swagger.annotations.Api;
@@ -37,6 +43,9 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 public class ProjectCreateController {
 	@Autowired
+	TProjectService projectService;
+
+	@Autowired
 	StringRedisTemplate stringRedisTemplate;
 
 	@Autowired
@@ -47,7 +56,7 @@ public class ProjectCreateController {
 	public AppResponse<Object> init(BaseVo vo) {
 
 		try {
-			// 判断用户token是否为空
+			// 校验判断用户token是否为空
 			String accessToken = vo.getAccessToken();
 			if (StringUtils.isEmpty(accessToken)) {
 				AppResponse resp = AppResponse.fail(null);
@@ -85,26 +94,154 @@ public class ProjectCreateController {
 		} catch (BeansException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			log.debug("表单处理失败", e.getMessage());
 			return AppResponse.fail(null);
 		}
 	}
 
 	@ApiOperation(value = "2-项目基本信息")
 	@PostMapping("/baseinfo")
-	public AppResponse<Object> baseinfo() {
-		return AppResponse.ok("ok");
+	public AppResponse<Object> baseinfo(ProjectBaseInfoVo vo) {
+
+		try {
+			// 校验判断用户token是否为空
+			String accessToken = vo.getAccessToken();
+			if (StringUtils.isEmpty(accessToken)) {
+				AppResponse resp = AppResponse.fail(null);
+				resp.setMsg("请求必须提速accessToken");
+				return resp;
+			}
+
+			String memberId = stringRedisTemplate.opsForValue().get(accessToken);
+
+			// 判断用户token是否存在
+			if (StringUtils.isEmpty(memberId)) {
+				AppResponse resp = AppResponse.fail(null);
+				resp.setMsg("请先登录");
+				return resp;
+			}
+
+			// 2.拿到大vo，小vo对拷大vo，再放回去
+			String bigJson = stringRedisTemplate.opsForValue()
+					.get(ProjectConstant.TEMP_PROJECT_PREFIX + vo.getProjectToken());
+
+			// json转vo
+			ProjectRedisStorageVo bigVo = JSON.parseObject(bigJson, ProjectRedisStorageVo.class);
+
+			BeanUtils.copyProperties(vo, bigVo);
+
+			bigJson = JSON.toJSONString(bigVo);
+
+			stringRedisTemplate.opsForValue().set(ProjectConstant.TEMP_PROJECT_PREFIX + vo.getProjectToken(), bigJson);
+			log.debug("大vo数据：{}", bigVo);
+
+			return AppResponse.ok(bigVo);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			log.debug("表单处理失败", e.getMessage());
+			return AppResponse.fail(null);
+		}
 	}
 
 	@ApiOperation(value = "3-添加项目回报档位")
 	@PostMapping("/return")
-	public AppResponse<Object> returnDetail() {
-		return AppResponse.ok("ok");
+	public AppResponse<Object> returnDetail(@RequestBody List<ProjectReturnVo> pro) {
+
+		try {
+			// 校验判断用户token是否为空
+			String accessToken = pro.get(0).getAccessToken();
+			if (StringUtils.isEmpty(accessToken)) {
+				AppResponse resp = AppResponse.fail(null);
+				resp.setMsg("请求必须提速accessToken");
+				return resp;
+			}
+
+			String memberId = stringRedisTemplate.opsForValue().get(accessToken);
+
+			// 判断用户token是否存在
+			if (StringUtils.isEmpty(memberId)) {
+				AppResponse resp = AppResponse.fail(null);
+				resp.setMsg("请先登录");
+				return resp;
+			}
+
+			// 2.拿到大vo，小vo对拷大vo，再放回去
+			String bigJson = stringRedisTemplate.opsForValue()
+					.get(ProjectConstant.TEMP_PROJECT_PREFIX + pro.get(0).getProjectToken());// 至少1个
+
+			// json转vo
+			ProjectRedisStorageVo bigVo = JSON.parseObject(bigJson, ProjectRedisStorageVo.class);
+
+			// 对拷到集合
+			List<TReturn> projectReturns = bigVo.getProjectReturns();
+
+			for (ProjectReturnVo projectReturnVo : pro) {
+				TReturn returnObj = new TReturn();
+				BeanUtils.copyProperties(projectReturnVo, returnObj);
+				projectReturns.add(returnObj);
+			}
+
+			bigJson = JSON.toJSONString(bigVo);
+
+			stringRedisTemplate.opsForValue().set(ProjectConstant.TEMP_PROJECT_PREFIX + pro.get(0).getProjectToken(),
+					bigJson);
+
+			log.debug("大vo数据：{}", bigVo);
+			return AppResponse.ok(bigVo);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			log.debug("表单处理失败", e.getMessage());
+			return AppResponse.fail(null);
+		}
 	}
 
 	@ApiOperation(value = "4-项目提交审核申请")
 	@PostMapping("/submit")
-	public AppResponse<Object> submit() {
-		return AppResponse.ok("ok");
+	public AppResponse<Object> submit(String accessToken, String projectToken, String ops) {
+
+		try {
+			// 校验判断用户token是否为空
+
+			if (StringUtils.isEmpty(accessToken)) {
+				AppResponse resp = AppResponse.fail(null);
+				resp.setMsg("请求必须提速accessToken");
+				return resp;
+			}
+
+			String memberId = stringRedisTemplate.opsForValue().get(accessToken);
+
+			// 判断用户token是否存在
+			if (StringUtils.isEmpty(memberId)) {
+				AppResponse resp = AppResponse.fail(null);
+				resp.setMsg("请先登录");
+				return resp;
+			}
+
+			// 判断ops是0还是1
+			if ("0".equals(ops)) {// 保存草稿
+
+				projectService.saveProject(accessToken, projectToken, ProjectStatusEnume.DRAFT.getCode());
+
+				log.debug("ops-------------------------------------------------------0");
+				return AppResponse.ok("ok");
+			} else if ("1".equals(ops)) {// 保存成功
+				log.debug("ops-------------------------------------------------------1");
+				projectService.saveProject(accessToken, projectToken, ProjectStatusEnume.SUBMIT_AUTH.getCode());
+
+				return AppResponse.ok("ok");
+			} else {
+				log.debug("请求方式不支持");
+				return AppResponse.fail("请求方式不支持");
+			}
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			log.debug("项目操作失败-{}", e.getMessage());
+			return AppResponse.fail(null);
+		}
 	}
 
 	/**
