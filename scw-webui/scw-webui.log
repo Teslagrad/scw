@@ -1,0 +1,1126 @@
+2020-03-22 00:01:57.363  INFO 6236 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 00:06:57.375  INFO 6236 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 00:11:57.378  INFO 6236 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 00:16:57.379  INFO 6236 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 00:21:57.380  INFO 6236 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 00:26:57.383  INFO 6236 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 00:29:09.552 DEBUG 6236 --- [http-nio-10000-exec-4] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 00:31:21.433  INFO 6236 --- [RMI TCP Connection(134)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-03-22 00:31:21.436  INFO 6236 --- [RMI TCP Connection(134)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SCW-WEBUI with eureka with status DOWN
+2020-03-22 00:31:21.437  WARN 6236 --- [RMI TCP Connection(134)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584808281437, current=DOWN, previous=UP]
+2020-03-22 00:31:21.438  INFO 6236 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 00:31:21.450  INFO 6236 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 00:31:21.460  INFO 6236 --- [RMI TCP Connection(134)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 00:31:21.475  INFO 6236 --- [RMI TCP Connection(134)-127.0.0.1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 00:31:21.699  INFO 6236 --- [RMI TCP Connection(134)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-03-22 00:31:24.701  INFO 6236 --- [RMI TCP Connection(134)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-03-22 00:31:24.707  INFO 6236 --- [RMI TCP Connection(134)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - deregister  status: 200
+2020-03-22 00:31:24.724  INFO 6236 --- [RMI TCP Connection(134)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-03-22 00:31:25.113  INFO 6236 --- [RMI TCP Connection(134)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-03-22 00:31:25.115  INFO 6236 --- [RMI TCP Connection(134)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-03-22 00:31:25.128  WARN 6236 --- [RMI TCP Connection(134)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:31:25.128  WARN 6236 --- [RMI TCP Connection(134)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxComputationScheduler-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:31:25.129  WARN 6236 --- [RMI TCP Connection(134)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:31:25.129  WARN 6236 --- [RMI TCP Connection(134)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [DataPublisher] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:31:25.130  WARN 6236 --- [RMI TCP Connection(134)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:31:25.137  INFO 6236 --- [Thread-14] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2020-03-22 00:32:25.879  INFO 1632 --- [main] com.atguigu.scw.ScwWebuiApplication      : No active profile set, falling back to default profiles: default
+2020-03-22 00:32:26.819  INFO 1632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-22 00:32:26.822  INFO 1632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-03-22 00:32:26.855  INFO 1632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+2020-03-22 00:32:27.258  INFO 1632 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2bd372e4-691a-3629-a239-a4f88e7226af
+2020-03-22 00:32:27.351  INFO 1632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.atguigu.scw.webui.service.TMemberServiceFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-22 00:32:28.023  INFO 1632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2020-03-22 00:32:28.035  INFO 1632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-22 00:32:28.036  INFO 1632 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-22 00:32:28.190  INFO 1632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-22 00:32:28.190  INFO 1632 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2277 ms
+2020-03-22 00:32:29.066  WARN 1632 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-22 00:32:29.066  INFO 1632 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-22 00:32:29.072  WARN 1632 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-22 00:32:29.072  INFO 1632 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-22 00:32:29.339  INFO 1632 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 00:32:29.471  INFO 1632 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-22 00:32:29.951  INFO 1632 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-03-22 00:32:29.953  INFO 1632 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-03-22 00:32:32.348  WARN 1632 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-03-22 00:32:32.428  INFO 1632 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-03-22 00:32:32.464  INFO 1632 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-03-22 00:32:33.058  INFO 1632 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-03-22 00:32:33.058  INFO 1632 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-03-22 00:32:33.178  INFO 1632 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-03-22 00:32:33.178  INFO 1632 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-03-22 00:32:33.391  INFO 1632 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 00:32:33.760  INFO 1632 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-03-22 00:32:33.760  INFO 1632 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-03-22 00:32:33.760  INFO 1632 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-03-22 00:32:33.760  INFO 1632 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-03-22 00:32:33.760  INFO 1632 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-03-22 00:32:33.761  INFO 1632 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-03-22 00:32:33.761  INFO 1632 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-03-22 00:32:33.882  INFO 1632 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-03-22 00:32:33.884  INFO 1632 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-03-22 00:32:33.887  INFO 1632 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-03-22 00:32:33.892  INFO 1632 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1584808353890 with initial instances count: 0
+2020-03-22 00:32:33.895  INFO 1632 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SCW-WEBUI with eureka with status UP
+2020-03-22 00:32:33.896  INFO 1632 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584808353896, current=UP, previous=STARTING]
+2020-03-22 00:32:33.898  INFO 1632 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 00:32:33.974  INFO 1632 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 00:32:34.498  INFO 1632 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-03-22 00:32:34.529  INFO 1632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2020-03-22 00:32:34.530  INFO 1632 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 10000
+2020-03-22 00:32:35.065  INFO 1632 --- [main] com.atguigu.scw.ScwWebuiApplication      : Started ScwWebuiApplication in 11.688 seconds (JVM running for 15.387)
+2020-03-22 00:32:47.562  INFO 1632 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-22 00:32:47.562  INFO 1632 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-22 00:32:47.572  INFO 1632 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-03-22 00:32:53.569  INFO 1632 --- [hystrix-SCW-USER-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:32:53.602  INFO 1632 --- [hystrix-SCW-USER-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 00:32:53.603  INFO 1632 --- [hystrix-SCW-USER-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: SCW-USER instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=SCW-USER,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-03-22 00:32:53.610  INFO 1632 --- [hystrix-SCW-USER-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2020-03-22 00:32:53.613  INFO 1632 --- [hystrix-SCW-USER-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client SCW-USER initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=SCW-USER,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@4577c336
+2020-03-22 00:32:53.660 ERROR 1632 --- [hystrix-SCW-USER-1] .e.h.TMemberServiceFeignExceptionHandler : 调用远程服务【登录】失败
+2020-03-22 00:32:53.664 DEBUG 1632 --- [http-nio-10000-exec-3] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 00:33:03.887  INFO 1632 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-03-22 00:33:03.888  INFO 1632 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-03-22 00:33:03.889  INFO 1632 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-03-22 00:33:03.889  INFO 1632 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-03-22 00:33:03.889  INFO 1632 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-03-22 00:33:03.890  INFO 1632 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2020-03-22 00:33:03.890  INFO 1632 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-03-22 00:33:03.948  INFO 1632 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-03-22 00:33:24.652  INFO 1632 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:35:20.875  INFO 1632 --- [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-03-22 00:35:20.876  INFO 1632 --- [RMI TCP Connection(12)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SCW-WEBUI with eureka with status DOWN
+2020-03-22 00:35:20.876  WARN 1632 --- [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584808520876, current=DOWN, previous=UP]
+2020-03-22 00:35:20.876  INFO 1632 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 00:35:20.881  INFO 1632 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 00:35:20.887  INFO 1632 --- [RMI TCP Connection(12)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 00:35:20.898  INFO 1632 --- [RMI TCP Connection(12)-127.0.0.1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 00:35:21.131  INFO 1632 --- [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-03-22 00:35:24.137  INFO 1632 --- [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-03-22 00:35:24.148  INFO 1632 --- [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - deregister  status: 200
+2020-03-22 00:35:24.179  INFO 1632 --- [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-03-22 00:35:24.539  INFO 1632 --- [RMI TCP Connection(12)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-03-22 00:35:24.542  INFO 1632 --- [RMI TCP Connection(12)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-03-22 00:35:24.554  WARN 1632 --- [RMI TCP Connection(12)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:35:24.555  WARN 1632 --- [RMI TCP Connection(12)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxComputationScheduler-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:35:24.556  WARN 1632 --- [RMI TCP Connection(12)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:35:24.557  WARN 1632 --- [RMI TCP Connection(12)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:35:24.558  WARN 1632 --- [RMI TCP Connection(12)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [DataPublisher] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:35:24.566  INFO 1632 --- [Thread-14] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2020-03-22 00:35:33.018  INFO 8928 --- [main] com.atguigu.scw.ScwWebuiApplication      : No active profile set, falling back to default profiles: default
+2020-03-22 00:35:33.614  INFO 8928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-22 00:35:33.616  INFO 8928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-03-22 00:35:33.643  INFO 8928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2020-03-22 00:35:33.964  INFO 8928 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2bd372e4-691a-3629-a239-a4f88e7226af
+2020-03-22 00:35:34.048  INFO 8928 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.atguigu.scw.webui.service.TMemberServiceFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-22 00:35:34.492  INFO 8928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2020-03-22 00:35:34.503  INFO 8928 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-22 00:35:34.504  INFO 8928 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-22 00:35:34.640  INFO 8928 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-22 00:35:34.640  INFO 8928 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1597 ms
+2020-03-22 00:35:35.324  WARN 8928 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-22 00:35:35.325  INFO 8928 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-22 00:35:35.329  WARN 8928 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-22 00:35:35.329  INFO 8928 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-22 00:35:35.508  INFO 8928 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 00:35:35.574  INFO 8928 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-22 00:35:35.970  INFO 8928 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-03-22 00:35:35.972  INFO 8928 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-03-22 00:35:38.068  WARN 8928 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-03-22 00:35:38.150  INFO 8928 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-03-22 00:35:38.212  INFO 8928 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-03-22 00:35:38.882  INFO 8928 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-03-22 00:35:38.883  INFO 8928 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-03-22 00:35:38.996  INFO 8928 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-03-22 00:35:38.997  INFO 8928 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-03-22 00:35:39.205  INFO 8928 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 00:35:39.580  INFO 8928 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-03-22 00:35:39.580  INFO 8928 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-03-22 00:35:39.581  INFO 8928 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-03-22 00:35:39.581  INFO 8928 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-03-22 00:35:39.581  INFO 8928 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-03-22 00:35:39.581  INFO 8928 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-03-22 00:35:39.581  INFO 8928 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-03-22 00:35:39.762  INFO 8928 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-03-22 00:35:39.766  INFO 8928 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-03-22 00:35:39.768  INFO 8928 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-03-22 00:35:39.774  INFO 8928 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1584808539773 with initial instances count: 1
+2020-03-22 00:35:39.780  INFO 8928 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SCW-WEBUI with eureka with status UP
+2020-03-22 00:35:39.780  INFO 8928 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584808539780, current=UP, previous=STARTING]
+2020-03-22 00:35:39.782  INFO 8928 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 00:35:39.841  INFO 8928 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 00:35:40.376  INFO 8928 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-03-22 00:35:40.398  INFO 8928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2020-03-22 00:35:40.399  INFO 8928 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 10000
+2020-03-22 00:35:40.959  INFO 8928 --- [main] com.atguigu.scw.ScwWebuiApplication      : Started ScwWebuiApplication in 9.88 seconds (JVM running for 10.953)
+2020-03-22 00:35:49.360  INFO 8928 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-22 00:35:49.361  INFO 8928 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-22 00:35:49.370  INFO 8928 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-03-22 00:35:50.029  INFO 8928 --- [hystrix-SCW-USER-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:35:50.064  INFO 8928 --- [hystrix-SCW-USER-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 00:35:50.065  INFO 8928 --- [hystrix-SCW-USER-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: SCW-USER instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=SCW-USER,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-03-22 00:35:50.073  INFO 8928 --- [hystrix-SCW-USER-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2020-03-22 00:35:50.103  INFO 8928 --- [hystrix-SCW-USER-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:35:50.105  INFO 8928 --- [hystrix-SCW-USER-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client SCW-USER initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=SCW-USER,current list of Servers=[192.168.164.1:7000],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.164.1:7000;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@776b19a4
+2020-03-22 00:35:50.959 DEBUG 8928 --- [http-nio-10000-exec-1] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 00:35:51.076  INFO 8928 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:38:19.475  INFO 8928 --- [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-03-22 00:38:19.476  INFO 8928 --- [RMI TCP Connection(13)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SCW-WEBUI with eureka with status DOWN
+2020-03-22 00:38:19.476  WARN 8928 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584808699476, current=DOWN, previous=UP]
+2020-03-22 00:38:19.477  INFO 8928 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 00:38:19.483  INFO 8928 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 00:38:19.490  INFO 8928 --- [RMI TCP Connection(13)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 00:38:19.503  INFO 8928 --- [RMI TCP Connection(13)-127.0.0.1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 00:38:19.723  INFO 8928 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-03-22 00:38:22.728  INFO 8928 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-03-22 00:38:22.739  INFO 8928 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - deregister  status: 200
+2020-03-22 00:38:22.776  INFO 8928 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-03-22 00:38:23.144  INFO 8928 --- [RMI TCP Connection(13)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-03-22 00:38:23.146  INFO 8928 --- [RMI TCP Connection(13)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-03-22 00:38:23.156  WARN 8928 --- [RMI TCP Connection(13)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:38:23.158  WARN 8928 --- [RMI TCP Connection(13)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxComputationScheduler-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:38:23.159  WARN 8928 --- [RMI TCP Connection(13)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:38:23.159  WARN 8928 --- [RMI TCP Connection(13)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [DataPublisher] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:38:23.160  WARN 8928 --- [RMI TCP Connection(13)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:38:23.166  INFO 8928 --- [Thread-14] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2020-03-22 00:40:34.303  INFO 2356 --- [main] com.atguigu.scw.ScwWebuiApplication      : No active profile set, falling back to default profiles: default
+2020-03-22 00:40:34.910  INFO 2356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-22 00:40:34.912  INFO 2356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-03-22 00:40:34.941  INFO 2356 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2020-03-22 00:40:35.269  INFO 2356 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2bd372e4-691a-3629-a239-a4f88e7226af
+2020-03-22 00:40:35.349  INFO 2356 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.atguigu.scw.webui.service.TMemberServiceFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-22 00:40:35.819  INFO 2356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2020-03-22 00:40:35.828  INFO 2356 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-22 00:40:35.829  INFO 2356 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-22 00:40:35.963  INFO 2356 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-22 00:40:35.964  INFO 2356 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1633 ms
+2020-03-22 00:40:36.675  WARN 2356 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-22 00:40:36.676  INFO 2356 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-22 00:40:36.681  WARN 2356 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-22 00:40:36.681  INFO 2356 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-22 00:40:36.869  INFO 2356 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 00:40:36.935  INFO 2356 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-22 00:40:37.348  INFO 2356 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-03-22 00:40:37.349  INFO 2356 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-03-22 00:40:39.476  WARN 2356 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-03-22 00:40:39.555  INFO 2356 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-03-22 00:40:39.592  INFO 2356 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-03-22 00:40:40.229  INFO 2356 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-03-22 00:40:40.230  INFO 2356 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-03-22 00:40:40.348  INFO 2356 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-03-22 00:40:40.348  INFO 2356 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-03-22 00:40:40.535  INFO 2356 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 00:40:40.921  INFO 2356 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-03-22 00:40:40.921  INFO 2356 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-03-22 00:40:40.921  INFO 2356 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-03-22 00:40:40.921  INFO 2356 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-03-22 00:40:40.921  INFO 2356 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-03-22 00:40:40.921  INFO 2356 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-03-22 00:40:40.922  INFO 2356 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-03-22 00:40:41.106  INFO 2356 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-03-22 00:40:41.109  INFO 2356 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-03-22 00:40:41.112  INFO 2356 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-03-22 00:40:41.117  INFO 2356 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1584808841116 with initial instances count: 1
+2020-03-22 00:40:41.120  INFO 2356 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SCW-WEBUI with eureka with status UP
+2020-03-22 00:40:41.121  INFO 2356 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584808841121, current=UP, previous=STARTING]
+2020-03-22 00:40:41.123  INFO 2356 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 00:40:41.178  INFO 2356 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 00:40:41.737  INFO 2356 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-03-22 00:40:41.767  INFO 2356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2020-03-22 00:40:41.768  INFO 2356 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 10000
+2020-03-22 00:40:42.334  INFO 2356 --- [main] com.atguigu.scw.ScwWebuiApplication      : Started ScwWebuiApplication in 10.077 seconds (JVM running for 11.213)
+2020-03-22 00:41:07.666  INFO 2356 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-22 00:41:07.666  INFO 2356 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-22 00:41:07.679  INFO 2356 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-03-22 00:41:16.591  INFO 2356 --- [hystrix-SCW-USER-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:41:16.621  INFO 2356 --- [hystrix-SCW-USER-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 00:41:16.622  INFO 2356 --- [hystrix-SCW-USER-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: SCW-USER instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=SCW-USER,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-03-22 00:41:16.628  INFO 2356 --- [hystrix-SCW-USER-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2020-03-22 00:41:16.658  INFO 2356 --- [hystrix-SCW-USER-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:41:16.660  INFO 2356 --- [hystrix-SCW-USER-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client SCW-USER initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=SCW-USER,current list of Servers=[192.168.164.1:7000],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.164.1:7000;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@27c6cbce
+2020-03-22 00:41:16.758 DEBUG 2356 --- [http-nio-10000-exec-3] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 00:41:17.637  INFO 2356 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:45:40.925  INFO 2356 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 00:46:05.325 DEBUG 2356 --- [http-nio-10000-exec-6] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 00:47:50.602  INFO 2356 --- [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-03-22 00:47:50.603  INFO 2356 --- [RMI TCP Connection(17)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SCW-WEBUI with eureka with status DOWN
+2020-03-22 00:47:50.603  WARN 2356 --- [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584809270603, current=DOWN, previous=UP]
+2020-03-22 00:47:50.604  INFO 2356 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 00:47:50.609  INFO 2356 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 00:47:50.617  INFO 2356 --- [RMI TCP Connection(17)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 00:47:50.630  INFO 2356 --- [RMI TCP Connection(17)-127.0.0.1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 00:47:50.752  INFO 2356 --- [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-03-22 00:47:53.757  INFO 2356 --- [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-03-22 00:47:53.768  INFO 2356 --- [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - deregister  status: 200
+2020-03-22 00:47:53.797  INFO 2356 --- [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-03-22 00:47:54.148  INFO 2356 --- [RMI TCP Connection(17)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-03-22 00:47:54.150  INFO 2356 --- [RMI TCP Connection(17)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-03-22 00:47:54.160  WARN 2356 --- [RMI TCP Connection(17)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:47:54.161  WARN 2356 --- [RMI TCP Connection(17)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxComputationScheduler-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:47:54.162  WARN 2356 --- [RMI TCP Connection(17)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:47:54.162  WARN 2356 --- [RMI TCP Connection(17)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [DataPublisher] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:47:54.163  WARN 2356 --- [RMI TCP Connection(17)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:47:54.169  INFO 2356 --- [Thread-14] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2020-03-22 00:48:01.811  INFO 6740 --- [main] com.atguigu.scw.ScwWebuiApplication      : No active profile set, falling back to default profiles: default
+2020-03-22 00:48:02.374  INFO 6740 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-22 00:48:02.376  INFO 6740 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-03-22 00:48:02.402  INFO 6740 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-03-22 00:48:02.707  INFO 6740 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2bd372e4-691a-3629-a239-a4f88e7226af
+2020-03-22 00:48:02.785  INFO 6740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.atguigu.scw.webui.service.TMemberServiceFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-22 00:48:03.221  INFO 6740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2020-03-22 00:48:03.231  INFO 6740 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-22 00:48:03.232  INFO 6740 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-22 00:48:03.359  INFO 6740 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-22 00:48:03.359  INFO 6740 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1525 ms
+2020-03-22 00:48:04.031  WARN 6740 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-22 00:48:04.032  INFO 6740 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-22 00:48:04.036  WARN 6740 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-22 00:48:04.037  INFO 6740 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-22 00:48:04.203  INFO 6740 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 00:48:04.267  INFO 6740 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-22 00:48:04.646  INFO 6740 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-03-22 00:48:04.647  INFO 6740 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-03-22 00:48:06.656  WARN 6740 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-03-22 00:48:06.734  INFO 6740 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-03-22 00:48:06.770  INFO 6740 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-03-22 00:48:07.385  INFO 6740 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-03-22 00:48:07.386  INFO 6740 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-03-22 00:48:07.505  INFO 6740 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-03-22 00:48:07.506  INFO 6740 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-03-22 00:48:07.690  INFO 6740 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 00:48:08.067  INFO 6740 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-03-22 00:48:08.067  INFO 6740 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-03-22 00:48:08.068  INFO 6740 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-03-22 00:48:08.068  INFO 6740 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-03-22 00:48:08.068  INFO 6740 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-03-22 00:48:08.068  INFO 6740 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-03-22 00:48:08.068  INFO 6740 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-03-22 00:48:08.248  INFO 6740 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-03-22 00:48:08.251  INFO 6740 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-03-22 00:48:08.253  INFO 6740 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-03-22 00:48:08.260  INFO 6740 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1584809288258 with initial instances count: 1
+2020-03-22 00:48:08.264  INFO 6740 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SCW-WEBUI with eureka with status UP
+2020-03-22 00:48:08.265  INFO 6740 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584809288265, current=UP, previous=STARTING]
+2020-03-22 00:48:08.267  INFO 6740 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 00:48:08.320  INFO 6740 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 00:48:08.882  INFO 6740 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-03-22 00:48:08.911  INFO 6740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2020-03-22 00:48:08.912  INFO 6740 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 10000
+2020-03-22 00:48:09.480  INFO 6740 --- [main] com.atguigu.scw.ScwWebuiApplication      : Started ScwWebuiApplication in 9.562 seconds (JVM running for 10.583)
+2020-03-22 00:48:26.823  INFO 6740 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-22 00:48:26.823  INFO 6740 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-22 00:48:26.833  INFO 6740 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-03-22 00:48:27.727  INFO 6740 --- [hystrix-SCW-USER-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:48:27.805  INFO 6740 --- [hystrix-SCW-USER-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 00:48:27.808  INFO 6740 --- [hystrix-SCW-USER-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: SCW-USER instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=SCW-USER,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-03-22 00:48:27.819  INFO 6740 --- [hystrix-SCW-USER-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2020-03-22 00:48:27.872  INFO 6740 --- [hystrix-SCW-USER-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:48:27.877  INFO 6740 --- [hystrix-SCW-USER-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client SCW-USER initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=SCW-USER,current list of Servers=[192.168.164.1:7000],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.164.1:7000;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@9f23c72
+2020-03-22 00:48:27.989 DEBUG 6740 --- [http-nio-10000-exec-1] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 00:48:28.826  INFO 6740 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:50:12.929  INFO 6740 --- [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-03-22 00:50:12.929  INFO 6740 --- [RMI TCP Connection(9)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SCW-WEBUI with eureka with status DOWN
+2020-03-22 00:50:12.930  WARN 6740 --- [RMI TCP Connection(9)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584809412930, current=DOWN, previous=UP]
+2020-03-22 00:50:12.930  INFO 6740 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 00:50:12.936  INFO 6740 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 00:50:12.946  INFO 6740 --- [RMI TCP Connection(9)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 00:50:12.959  INFO 6740 --- [RMI TCP Connection(9)-127.0.0.1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 00:50:13.094  INFO 6740 --- [RMI TCP Connection(9)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-03-22 00:50:16.101  INFO 6740 --- [RMI TCP Connection(9)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-03-22 00:50:16.114  INFO 6740 --- [RMI TCP Connection(9)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - deregister  status: 200
+2020-03-22 00:50:16.145  INFO 6740 --- [RMI TCP Connection(9)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-03-22 00:50:16.505  INFO 6740 --- [RMI TCP Connection(9)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-03-22 00:50:16.507  INFO 6740 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-03-22 00:50:16.516  WARN 6740 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:50:16.517  WARN 6740 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxComputationScheduler-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:50:16.518  WARN 6740 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:50:16.519  WARN 6740 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [DataPublisher] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:50:16.520  WARN 6740 --- [RMI TCP Connection(9)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:50:16.527  INFO 6740 --- [Thread-14] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2020-03-22 00:50:24.169  INFO 12572 --- [main] com.atguigu.scw.ScwWebuiApplication      : No active profile set, falling back to default profiles: default
+2020-03-22 00:50:24.738  INFO 12572 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-22 00:50:24.741  INFO 12572 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-03-22 00:50:24.768  INFO 12572 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-03-22 00:50:25.072  INFO 12572 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2bd372e4-691a-3629-a239-a4f88e7226af
+2020-03-22 00:50:25.152  INFO 12572 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.atguigu.scw.webui.service.TMemberServiceFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-22 00:50:25.574  INFO 12572 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2020-03-22 00:50:25.584  INFO 12572 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-22 00:50:25.584  INFO 12572 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-22 00:50:25.706  INFO 12572 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-22 00:50:25.706  INFO 12572 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1514 ms
+2020-03-22 00:50:26.371  WARN 12572 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-22 00:50:26.371  INFO 12572 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-22 00:50:26.376  WARN 12572 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-22 00:50:26.376  INFO 12572 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-22 00:50:26.548  INFO 12572 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 00:50:26.613  INFO 12572 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-22 00:50:26.990  INFO 12572 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-03-22 00:50:26.992  INFO 12572 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-03-22 00:50:29.046  WARN 12572 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-03-22 00:50:29.117  INFO 12572 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-03-22 00:50:29.153  INFO 12572 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-03-22 00:50:29.743  INFO 12572 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-03-22 00:50:29.744  INFO 12572 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-03-22 00:50:29.882  INFO 12572 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-03-22 00:50:29.882  INFO 12572 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-03-22 00:50:30.052  INFO 12572 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 00:50:30.425  INFO 12572 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-03-22 00:50:30.425  INFO 12572 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-03-22 00:50:30.425  INFO 12572 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-03-22 00:50:30.425  INFO 12572 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-03-22 00:50:30.425  INFO 12572 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-03-22 00:50:30.426  INFO 12572 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-03-22 00:50:30.426  INFO 12572 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-03-22 00:50:30.594  INFO 12572 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-03-22 00:50:30.597  INFO 12572 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-03-22 00:50:30.599  INFO 12572 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-03-22 00:50:30.605  INFO 12572 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1584809430603 with initial instances count: 1
+2020-03-22 00:50:30.609  INFO 12572 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SCW-WEBUI with eureka with status UP
+2020-03-22 00:50:30.609  INFO 12572 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584809430609, current=UP, previous=STARTING]
+2020-03-22 00:50:30.611  INFO 12572 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 00:50:30.662  INFO 12572 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 00:50:31.208  INFO 12572 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-03-22 00:50:31.236  INFO 12572 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2020-03-22 00:50:31.238  INFO 12572 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 10000
+2020-03-22 00:50:31.778  INFO 12572 --- [main] com.atguigu.scw.ScwWebuiApplication      : Started ScwWebuiApplication in 9.507 seconds (JVM running for 10.52)
+2020-03-22 00:50:44.944  INFO 12572 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-22 00:50:44.945  INFO 12572 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-22 00:50:44.955  INFO 12572 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-03-22 00:50:45.008 DEBUG 12572 --- [http-nio-10000-exec-1] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:17875304029
+2020-03-22 00:50:45.009 DEBUG 12572 --- [http-nio-10000-exec-1] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:null
+2020-03-22 00:50:45.599  INFO 12572 --- [hystrix-SCW-USER-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:50:45.636  INFO 12572 --- [hystrix-SCW-USER-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 00:50:45.637  INFO 12572 --- [hystrix-SCW-USER-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: SCW-USER instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=SCW-USER,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-03-22 00:50:45.645  INFO 12572 --- [hystrix-SCW-USER-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2020-03-22 00:50:45.684  INFO 12572 --- [hystrix-SCW-USER-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:50:45.687  INFO 12572 --- [hystrix-SCW-USER-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client SCW-USER initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=SCW-USER,current list of Servers=[192.168.164.1:7000],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.164.1:7000;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@5b99d31d
+2020-03-22 00:50:45.784 DEBUG 12572 --- [http-nio-10000-exec-1] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 00:50:46.651  INFO 12572 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:52:27.064 DEBUG 12572 --- [http-nio-10000-exec-4] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:17875304029
+2020-03-22 00:52:27.064 DEBUG 12572 --- [http-nio-10000-exec-4] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:null
+2020-03-22 00:52:27.090 DEBUG 12572 --- [http-nio-10000-exec-4] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 00:53:14.092 DEBUG 12572 --- [http-nio-10000-exec-6] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:17875304029
+2020-03-22 00:53:14.093 DEBUG 12572 --- [http-nio-10000-exec-6] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:null
+2020-03-22 00:53:14.115 DEBUG 12572 --- [http-nio-10000-exec-6] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 00:53:26.008 DEBUG 12572 --- [http-nio-10000-exec-8] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:17875304029
+2020-03-22 00:53:26.009 DEBUG 12572 --- [http-nio-10000-exec-8] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:123456
+2020-03-22 00:53:27.069 ERROR 12572 --- [hystrix-SCW-USER-4] .e.h.TMemberServiceFeignExceptionHandler : 调用远程服务【登录】失败
+2020-03-22 00:53:27.070 DEBUG 12572 --- [http-nio-10000-exec-8] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 00:54:17.694 DEBUG 12572 --- [http-nio-10000-exec-10] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:17875304029
+2020-03-22 00:54:17.695 DEBUG 12572 --- [http-nio-10000-exec-10] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:123456
+2020-03-22 00:54:17.858 ERROR 12572 --- [http-nio-10000-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+org.springframework.data.redis.serializer.SerializationException: Cannot serialize; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to serialize object using DefaultSerializer; nested exception is java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [com.atguigu.scw.webui.vo.resp.UserRespVo]
+	at org.springframework.data.redis.serializer.JdkSerializationRedisSerializer.serialize(JdkSerializationRedisSerializer.java:96) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.data.redis.core.AbstractOperations.rawHashValue(AbstractOperations.java:185) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.data.redis.core.DefaultHashOperations.putAll(DefaultHashOperations.java:147) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.data.redis.core.DefaultBoundHashOperations.putAll(DefaultBoundHashOperations.java:147) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository$RedisSession.saveDelta(RedisIndexedSessionRepository.java:795) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository$RedisSession.save(RedisIndexedSessionRepository.java:783) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository$RedisSession.access$000(RedisIndexedSessionRepository.java:670) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository.save(RedisIndexedSessionRepository.java:398) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository.save(RedisIndexedSessionRepository.java:249) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper.commitSession(SessionRepositoryFilter.java:225) ~[spring-session-core-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper.access$100(SessionRepositoryFilter.java:192) ~[spring-session-core-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:144) ~[spring-session-core-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:82) ~[spring-session-core-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+Caused by: org.springframework.core.serializer.support.SerializationFailedException: Failed to serialize object using DefaultSerializer; nested exception is java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [com.atguigu.scw.webui.vo.resp.UserRespVo]
+	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:68) ~[spring-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:35) ~[spring-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.data.redis.serializer.JdkSerializationRedisSerializer.serialize(JdkSerializationRedisSerializer.java:94) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	... 34 common frames omitted
+Caused by: java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [com.atguigu.scw.webui.vo.resp.UserRespVo]
+	at org.springframework.core.serializer.DefaultSerializer.serialize(DefaultSerializer.java:43) ~[spring-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:63) ~[spring-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	... 36 common frames omitted
+
+2020-03-22 00:54:17.877 ERROR 12572 --- [http-nio-10000-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+org.springframework.data.redis.serializer.SerializationException: Cannot serialize; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to serialize object using DefaultSerializer; nested exception is java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [com.atguigu.scw.webui.vo.resp.UserRespVo]
+	at org.springframework.data.redis.serializer.JdkSerializationRedisSerializer.serialize(JdkSerializationRedisSerializer.java:96) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.data.redis.core.AbstractOperations.rawHashValue(AbstractOperations.java:185) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.data.redis.core.DefaultHashOperations.putAll(DefaultHashOperations.java:147) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.data.redis.core.DefaultBoundHashOperations.putAll(DefaultBoundHashOperations.java:147) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository$RedisSession.saveDelta(RedisIndexedSessionRepository.java:795) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository$RedisSession.save(RedisIndexedSessionRepository.java:783) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository$RedisSession.access$000(RedisIndexedSessionRepository.java:670) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository.save(RedisIndexedSessionRepository.java:398) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository.save(RedisIndexedSessionRepository.java:249) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper.commitSession(SessionRepositoryFilter.java:225) ~[spring-session-core-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper.access$100(SessionRepositoryFilter.java:192) ~[spring-session-core-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:144) ~[spring-session-core-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:82) ~[spring-session-core-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+Caused by: org.springframework.core.serializer.support.SerializationFailedException: Failed to serialize object using DefaultSerializer; nested exception is java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [com.atguigu.scw.webui.vo.resp.UserRespVo]
+	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:68) ~[spring-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:35) ~[spring-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.data.redis.serializer.JdkSerializationRedisSerializer.serialize(JdkSerializationRedisSerializer.java:94) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	... 34 common frames omitted
+Caused by: java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [com.atguigu.scw.webui.vo.resp.UserRespVo]
+	at org.springframework.core.serializer.DefaultSerializer.serialize(DefaultSerializer.java:43) ~[spring-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:63) ~[spring-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	... 36 common frames omitted
+
+2020-03-22 00:54:17.879 ERROR 12572 --- [http-nio-10000-exec-10] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+org.springframework.data.redis.serializer.SerializationException: Cannot serialize; nested exception is org.springframework.core.serializer.support.SerializationFailedException: Failed to serialize object using DefaultSerializer; nested exception is java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [com.atguigu.scw.webui.vo.resp.UserRespVo]
+	at org.springframework.data.redis.serializer.JdkSerializationRedisSerializer.serialize(JdkSerializationRedisSerializer.java:96) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.data.redis.core.AbstractOperations.rawHashValue(AbstractOperations.java:185) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.data.redis.core.DefaultHashOperations.putAll(DefaultHashOperations.java:147) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.data.redis.core.DefaultBoundHashOperations.putAll(DefaultBoundHashOperations.java:147) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository$RedisSession.saveDelta(RedisIndexedSessionRepository.java:795) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository$RedisSession.save(RedisIndexedSessionRepository.java:783) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository$RedisSession.access$000(RedisIndexedSessionRepository.java:670) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository.save(RedisIndexedSessionRepository.java:398) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.data.redis.RedisIndexedSessionRepository.save(RedisIndexedSessionRepository.java:249) ~[spring-session-data-redis-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper.commitSession(SessionRepositoryFilter.java:225) ~[spring-session-core-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper.access$100(SessionRepositoryFilter.java:192) ~[spring-session-core-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.web.http.SessionRepositoryFilter.doFilterInternal(SessionRepositoryFilter.java:144) ~[spring-session-core-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.session.web.http.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:82) ~[spring-session-core-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_221]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.31.jar:9.0.31]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+Caused by: org.springframework.core.serializer.support.SerializationFailedException: Failed to serialize object using DefaultSerializer; nested exception is java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [com.atguigu.scw.webui.vo.resp.UserRespVo]
+	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:68) ~[spring-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:35) ~[spring-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.data.redis.serializer.JdkSerializationRedisSerializer.serialize(JdkSerializationRedisSerializer.java:94) ~[spring-data-redis-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	... 34 common frames omitted
+Caused by: java.lang.IllegalArgumentException: DefaultSerializer requires a Serializable payload but received an object of type [com.atguigu.scw.webui.vo.resp.UserRespVo]
+	at org.springframework.core.serializer.DefaultSerializer.serialize(DefaultSerializer.java:43) ~[spring-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:63) ~[spring-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	... 36 common frames omitted
+
+2020-03-22 00:55:30.429  INFO 12572 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 00:55:37.454  INFO 12572 --- [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-03-22 00:55:37.455  INFO 12572 --- [RMI TCP Connection(12)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SCW-WEBUI with eureka with status DOWN
+2020-03-22 00:55:37.455  WARN 12572 --- [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584809737455, current=DOWN, previous=UP]
+2020-03-22 00:55:37.456  INFO 12572 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 00:55:37.462  INFO 12572 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 00:55:37.468  INFO 12572 --- [RMI TCP Connection(12)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 00:55:37.481  INFO 12572 --- [RMI TCP Connection(12)-127.0.0.1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 00:55:37.704  INFO 12572 --- [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-03-22 00:55:40.708  INFO 12572 --- [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-03-22 00:55:40.718  INFO 12572 --- [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - deregister  status: 200
+2020-03-22 00:55:40.744  INFO 12572 --- [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-03-22 00:55:41.094  INFO 12572 --- [RMI TCP Connection(12)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-03-22 00:55:41.095  INFO 12572 --- [RMI TCP Connection(12)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-03-22 00:55:41.105  WARN 12572 --- [RMI TCP Connection(12)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:55:41.106  WARN 12572 --- [RMI TCP Connection(12)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxComputationScheduler-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:55:41.107  WARN 12572 --- [RMI TCP Connection(12)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:55:41.108  WARN 12572 --- [RMI TCP Connection(12)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [DataPublisher] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:55:41.109  WARN 12572 --- [RMI TCP Connection(12)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 00:55:41.113  INFO 12572 --- [Thread-14] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2020-03-22 00:55:48.819  INFO 8212 --- [main] com.atguigu.scw.ScwWebuiApplication      : No active profile set, falling back to default profiles: default
+2020-03-22 00:55:49.526  INFO 8212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-22 00:55:49.528  INFO 8212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-03-22 00:55:49.554  INFO 8212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-03-22 00:55:49.939  INFO 8212 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2bd372e4-691a-3629-a239-a4f88e7226af
+2020-03-22 00:55:50.023  INFO 8212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.atguigu.scw.webui.service.TMemberServiceFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-22 00:55:50.467  INFO 8212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2020-03-22 00:55:50.477  INFO 8212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-22 00:55:50.478  INFO 8212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-22 00:55:50.605  INFO 8212 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-22 00:55:50.605  INFO 8212 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1748 ms
+2020-03-22 00:55:51.317  WARN 8212 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-22 00:55:51.317  INFO 8212 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-22 00:55:51.322  WARN 8212 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-22 00:55:51.322  INFO 8212 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-22 00:55:51.499  INFO 8212 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 00:55:51.566  INFO 8212 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-22 00:55:51.952  INFO 8212 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-03-22 00:55:51.954  INFO 8212 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-03-22 00:55:54.095  WARN 8212 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-03-22 00:55:54.194  INFO 8212 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-03-22 00:55:54.242  INFO 8212 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-03-22 00:55:54.976  INFO 8212 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-03-22 00:55:54.977  INFO 8212 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-03-22 00:55:55.129  INFO 8212 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-03-22 00:55:55.129  INFO 8212 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-03-22 00:55:55.384  INFO 8212 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 00:55:55.921  INFO 8212 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-03-22 00:55:55.922  INFO 8212 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-03-22 00:55:55.922  INFO 8212 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-03-22 00:55:55.922  INFO 8212 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-03-22 00:55:55.922  INFO 8212 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-03-22 00:55:55.923  INFO 8212 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-03-22 00:55:55.923  INFO 8212 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-03-22 00:55:56.149  INFO 8212 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-03-22 00:55:56.153  INFO 8212 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-03-22 00:55:56.156  INFO 8212 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-03-22 00:55:56.162  INFO 8212 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1584809756161 with initial instances count: 2
+2020-03-22 00:55:56.168  INFO 8212 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SCW-WEBUI with eureka with status UP
+2020-03-22 00:55:56.168  INFO 8212 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584809756168, current=UP, previous=STARTING]
+2020-03-22 00:55:56.170  INFO 8212 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 00:55:56.237  INFO 8212 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 00:55:56.770  INFO 8212 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-03-22 00:55:56.797  INFO 8212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2020-03-22 00:55:56.798  INFO 8212 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 10000
+2020-03-22 00:55:57.405  INFO 8212 --- [main] com.atguigu.scw.ScwWebuiApplication      : Started ScwWebuiApplication in 10.503 seconds (JVM running for 11.521)
+2020-03-22 00:56:12.498  INFO 8212 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-22 00:56:12.498  INFO 8212 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-22 00:56:12.506  INFO 8212 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-03-22 00:56:12.553 DEBUG 8212 --- [http-nio-10000-exec-1] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:17875304029
+2020-03-22 00:56:12.554 DEBUG 8212 --- [http-nio-10000-exec-1] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:123456
+2020-03-22 00:56:13.102  INFO 8212 --- [hystrix-SCW-USER-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:56:13.132  INFO 8212 --- [hystrix-SCW-USER-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 00:56:13.133  INFO 8212 --- [hystrix-SCW-USER-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: SCW-USER instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=SCW-USER,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-03-22 00:56:13.141  INFO 8212 --- [hystrix-SCW-USER-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2020-03-22 00:56:13.176  INFO 8212 --- [hystrix-SCW-USER-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:56:13.178  INFO 8212 --- [hystrix-SCW-USER-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client SCW-USER initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=SCW-USER,current list of Servers=[192.168.164.1:7000],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.164.1:7000;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@3c846188
+2020-03-22 00:56:14.145  INFO 8212 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 00:56:14.233 ERROR 8212 --- [hystrix-SCW-USER-1] .e.h.TMemberServiceFeignExceptionHandler : 调用远程服务【登录】失败
+2020-03-22 00:56:14.239 DEBUG 8212 --- [http-nio-10000-exec-1] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 00:56:33.252 DEBUG 8212 --- [http-nio-10000-exec-3] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:17875304029
+2020-03-22 00:56:33.254 DEBUG 8212 --- [http-nio-10000-exec-3] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:123456
+2020-03-22 00:59:13.554 DEBUG 8212 --- [http-nio-10000-exec-8] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:17875304029
+2020-03-22 00:59:13.554 DEBUG 8212 --- [http-nio-10000-exec-8] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:123456
+2020-03-22 01:00:55.926  INFO 8212 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 01:05:00.071  INFO 8212 --- [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-03-22 01:05:00.073  INFO 8212 --- [RMI TCP Connection(17)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SCW-WEBUI with eureka with status DOWN
+2020-03-22 01:05:00.075  WARN 8212 --- [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584810300075, current=DOWN, previous=UP]
+2020-03-22 01:05:00.076  INFO 8212 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 01:05:00.083  INFO 8212 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 01:05:00.087  INFO 8212 --- [RMI TCP Connection(17)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 01:05:00.101  INFO 8212 --- [RMI TCP Connection(17)-127.0.0.1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 01:05:00.227  INFO 8212 --- [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-03-22 01:05:03.230  INFO 8212 --- [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-03-22 01:05:03.236  INFO 8212 --- [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - deregister  status: 200
+2020-03-22 01:05:03.252  INFO 8212 --- [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-03-22 01:05:03.718  INFO 8212 --- [RMI TCP Connection(17)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-03-22 01:05:03.720  INFO 8212 --- [RMI TCP Connection(17)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-03-22 01:05:03.735  WARN 8212 --- [RMI TCP Connection(17)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 01:05:03.736  WARN 8212 --- [RMI TCP Connection(17)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxComputationScheduler-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 01:05:03.737  WARN 8212 --- [RMI TCP Connection(17)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 01:05:03.738  WARN 8212 --- [RMI TCP Connection(17)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [DataPublisher] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 01:05:03.739  WARN 8212 --- [RMI TCP Connection(17)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 01:05:03.745  INFO 8212 --- [Thread-14] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2020-03-22 01:05:12.203  INFO 12596 --- [main] com.atguigu.scw.ScwWebuiApplication      : No active profile set, falling back to default profiles: default
+2020-03-22 01:05:12.830  INFO 12596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-22 01:05:12.832  INFO 12596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-03-22 01:05:12.859  INFO 12596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-03-22 01:05:13.173  INFO 12596 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2bd372e4-691a-3629-a239-a4f88e7226af
+2020-03-22 01:05:13.256  INFO 12596 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.atguigu.scw.webui.service.TMemberServiceFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-22 01:05:13.686  INFO 12596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2020-03-22 01:05:13.696  INFO 12596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-22 01:05:13.696  INFO 12596 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-22 01:05:13.823  INFO 12596 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-22 01:05:13.824  INFO 12596 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1599 ms
+2020-03-22 01:05:14.513  WARN 12596 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-22 01:05:14.513  INFO 12596 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-22 01:05:14.518  WARN 12596 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-03-22 01:05:14.518  INFO 12596 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-03-22 01:05:14.691  INFO 12596 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 01:05:14.754  INFO 12596 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-22 01:05:15.157  INFO 12596 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-03-22 01:05:15.158  INFO 12596 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-03-22 01:05:17.247  WARN 12596 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-03-22 01:05:17.318  INFO 12596 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-03-22 01:05:17.354  INFO 12596 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-03-22 01:05:17.961  INFO 12596 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-03-22 01:05:17.961  INFO 12596 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-03-22 01:05:18.070  INFO 12596 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-03-22 01:05:18.070  INFO 12596 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-03-22 01:05:18.237  INFO 12596 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 01:05:18.606  INFO 12596 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-03-22 01:05:18.606  INFO 12596 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-03-22 01:05:18.606  INFO 12596 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-03-22 01:05:18.607  INFO 12596 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-03-22 01:05:18.607  INFO 12596 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-03-22 01:05:18.607  INFO 12596 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-03-22 01:05:18.607  INFO 12596 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-03-22 01:05:18.776  INFO 12596 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-03-22 01:05:18.778  INFO 12596 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-03-22 01:05:18.781  INFO 12596 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-03-22 01:05:18.786  INFO 12596 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1584810318785 with initial instances count: 1
+2020-03-22 01:05:18.789  INFO 12596 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SCW-WEBUI with eureka with status UP
+2020-03-22 01:05:18.790  INFO 12596 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584810318790, current=UP, previous=STARTING]
+2020-03-22 01:05:18.792  INFO 12596 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 01:05:18.843  INFO 12596 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 01:05:19.394  INFO 12596 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-03-22 01:05:19.421  INFO 12596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2020-03-22 01:05:19.421  INFO 12596 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 10000
+2020-03-22 01:05:19.951  INFO 12596 --- [main] com.atguigu.scw.ScwWebuiApplication      : Started ScwWebuiApplication in 10.222 seconds (JVM running for 11.469)
+2020-03-22 01:05:32.686  INFO 12596 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-22 01:05:32.686  INFO 12596 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-22 01:05:32.693  INFO 12596 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-03-22 01:05:35.122 DEBUG 12596 --- [http-nio-10000-exec-2] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:17875304029
+2020-03-22 01:05:35.122 DEBUG 12596 --- [http-nio-10000-exec-2] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:123456
+2020-03-22 01:05:35.461  INFO 12596 --- [hystrix-SCW-USER-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 01:05:35.492  INFO 12596 --- [hystrix-SCW-USER-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 01:05:35.494  INFO 12596 --- [hystrix-SCW-USER-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: SCW-USER instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=SCW-USER,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-03-22 01:05:35.501  INFO 12596 --- [hystrix-SCW-USER-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2020-03-22 01:05:35.505  INFO 12596 --- [hystrix-SCW-USER-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client SCW-USER initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=SCW-USER,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@15057b8d
+2020-03-22 01:05:35.552 ERROR 12596 --- [hystrix-SCW-USER-1] .e.h.TMemberServiceFeignExceptionHandler : 调用远程服务【登录】失败
+2020-03-22 01:05:35.555 DEBUG 12596 --- [http-nio-10000-exec-2] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 01:05:40.723 DEBUG 12596 --- [http-nio-10000-exec-3] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:17875304029
+2020-03-22 01:05:40.724 DEBUG 12596 --- [http-nio-10000-exec-3] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:123456
+2020-03-22 01:05:40.731 ERROR 12596 --- [hystrix-SCW-USER-2] .e.h.TMemberServiceFeignExceptionHandler : 调用远程服务【登录】失败
+2020-03-22 01:05:40.732 DEBUG 12596 --- [http-nio-10000-exec-3] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 01:05:53.821 DEBUG 12596 --- [http-nio-10000-exec-5] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:17875304029
+2020-03-22 01:05:53.822 DEBUG 12596 --- [http-nio-10000-exec-5] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:123456
+2020-03-22 01:05:53.829 ERROR 12596 --- [hystrix-SCW-USER-3] .e.h.TMemberServiceFeignExceptionHandler : 调用远程服务【登录】失败
+2020-03-22 01:05:53.831 DEBUG 12596 --- [http-nio-10000-exec-5] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 01:06:06.527  INFO 12596 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: SCW-USER.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-03-22 01:06:12.889 DEBUG 12596 --- [http-nio-10000-exec-7] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:17875304029
+2020-03-22 01:06:12.890 DEBUG 12596 --- [http-nio-10000-exec-7] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:123456
+2020-03-22 01:06:13.910 ERROR 12596 --- [hystrix-SCW-USER-4] .e.h.TMemberServiceFeignExceptionHandler : 调用远程服务【登录】失败
+2020-03-22 01:06:13.914 DEBUG 12596 --- [http-nio-10000-exec-7] c.a.s.w.controller.DispatcherController  : data====================================================null
+2020-03-22 01:06:39.483 DEBUG 12596 --- [http-nio-10000-exec-9] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:17875304029
+2020-03-22 01:06:39.483 DEBUG 12596 --- [http-nio-10000-exec-9] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:123456
+2020-03-22 01:06:58.236 DEBUG 12596 --- [http-nio-10000-exec-3] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:17875304029
+2020-03-22 01:06:58.237 DEBUG 12596 --- [http-nio-10000-exec-3] c.a.s.w.controller.DispatcherController  : /dologin-----------------------------loginacct:123456
+2020-03-22 01:10:18.611  INFO 12596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 01:15:18.614  INFO 12596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 01:20:18.615  INFO 12596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-03-22 01:20:49.106  INFO 12596 --- [RMI TCP Connection(24)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-03-22 01:20:49.107  INFO 12596 --- [RMI TCP Connection(24)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SCW-WEBUI with eureka with status DOWN
+2020-03-22 01:20:49.108  WARN 12596 --- [RMI TCP Connection(24)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1584811249108, current=DOWN, previous=UP]
+2020-03-22 01:20:49.108  INFO 12596 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000: registering service...
+2020-03-22 01:20:49.111  INFO 12596 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - registration status: 204
+2020-03-22 01:20:49.117  INFO 12596 --- [RMI TCP Connection(24)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 01:20:49.127  INFO 12596 --- [RMI TCP Connection(24)-127.0.0.1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-SCW-USER
+2020-03-22 01:20:49.261  INFO 12596 --- [RMI TCP Connection(24)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-03-22 01:20:52.267  INFO 12596 --- [RMI TCP Connection(24)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-03-22 01:20:52.278  INFO 12596 --- [RMI TCP Connection(24)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SCW-WEBUI/DESKTOP-D043IVH.mshome.net:SCW-WEBUI:10000 - deregister  status: 200
+2020-03-22 01:20:52.306  INFO 12596 --- [RMI TCP Connection(24)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-03-22 01:20:52.656  INFO 12596 --- [RMI TCP Connection(24)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-03-22 01:20:52.659  INFO 12596 --- [RMI TCP Connection(24)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-03-22 01:20:52.669  WARN 12596 --- [RMI TCP Connection(24)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 01:20:52.670  WARN 12596 --- [RMI TCP Connection(24)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxComputationScheduler-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 01:20:52.671  WARN 12596 --- [RMI TCP Connection(24)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 01:20:52.671  WARN 12596 --- [RMI TCP Connection(24)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 01:20:52.672  WARN 12596 --- [RMI TCP Connection(24)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [DataPublisher] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2020-03-22 01:20:52.679  INFO 12596 --- [Thread-14] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater

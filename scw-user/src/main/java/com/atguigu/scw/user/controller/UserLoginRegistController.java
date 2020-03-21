@@ -46,8 +46,8 @@ public class UserLoginRegistController {
 	public AppResponse<UserRespVo> login(String loginacct, String password) {
 
 		try {
-			log.debug("登录表单数据loginacct- {}", loginacct);
-			log.debug("登录表单数据password- {}", password);
+			log.debug("登录表单数据loginacct----------------------------- {}", loginacct);
+			log.debug("登录表单数据password------------------------------ {}", password);
 
 			UserRespVo vo = memberService.getUserByLogin(loginacct, password);
 			log.debug("登录成功-{}", loginacct);

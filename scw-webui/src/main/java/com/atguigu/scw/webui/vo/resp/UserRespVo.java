@@ -1,4 +1,4 @@
-package com.atguigu.scw.user.vo.resp;
+package com.atguigu.scw.webui.vo.resp;
 
 import java.io.Serializable;
 
