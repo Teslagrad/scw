@@ -14,6 +14,12 @@ public class TProjectController {
 	@Autowired
 	TProjectServiceFeign projectServiceFeign;
 
+	@RequestMapping("/project/support/{projectId}/{returnId}")
+	public String support(Integer projectId, Integer returnId, Model model) {
+
+		return "project/pay-step-1";
+	}
+
 	@RequestMapping("/project/projectInfo")
 	public String index(Integer id, Model model) {
 

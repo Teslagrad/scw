@@ -12,6 +12,7 @@ import lombok.ToString;
 @ToString
 @Data
 public class ProjectDetailVo implements Serializable {
+	private Integer supporterCount;
 
 	private Integer memberid;// 会员id
 

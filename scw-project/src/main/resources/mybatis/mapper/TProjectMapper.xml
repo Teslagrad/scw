@@ -16,6 +16,13 @@
     <result column="createdate" jdbcType="CHAR" property="createdate" />
     <result column="follower" jdbcType="INTEGER" property="follower" />
   </resultMap>
+  
+  <!--int countSupporter();  -->
+  <select id="countSupporter" resultType="int">
+		select count(id) from t_project;
+	</select>
+  
+ 
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

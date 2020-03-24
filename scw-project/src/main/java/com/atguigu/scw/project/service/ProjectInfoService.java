@@ -24,4 +24,6 @@ public interface ProjectInfoService {
 
 	TReturn getProjectReturnById(Integer retId);
 
+	int getSupporterCount();
+
 }

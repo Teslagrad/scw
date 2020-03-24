@@ -75,4 +75,10 @@ public class ProjectInfoServiceImpl implements ProjectInfoService {
 		return returnMapper.selectByPrimaryKey(retId);
 	}
 
+	@Override
+	public int getSupporterCount() {
+		// 查询项目支持者总数
+		return projectMapper.countSupporter();
+	}
+
 }

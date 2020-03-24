@@ -48,6 +48,14 @@ public class ProjectInfoController {
 		// 1、查出这个项目的所有图片
 		List<TProjectImages> projectImages = projectInfoService.getProjectImages(p.getId());
 
+		// 2.项目支持者统计
+		int supporterCount = projectInfoService.getSupporterCount();
+
+//		log.debug("supporterCount======================================================={}", supporterCount);
+
+		projectVo.setSupporterCount(supporterCount);
+
+		// 3.想项目图片
 		for (TProjectImages tProjectImages : projectImages) {
 			if (tProjectImages.getImgtype() == 0) {
 				projectVo.setHeaderImage(tProjectImages.getImgurl());
@@ -57,7 +65,7 @@ public class ProjectInfoController {
 			}
 		}
 
-		// 2、项目的所有支持档位；
+		// 4、项目的所有支持档位；
 		List<TReturn> returns = projectInfoService.getProjectReturns(p.getId());
 		projectVo.setProjectReturns(returns);
 
