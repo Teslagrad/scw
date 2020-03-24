@@ -70,7 +70,7 @@ public class UserLoginRegistController {
 	public AppResponse<Object> register(UserRegistVo vo) {
 
 		String loginacct = vo.getLoginacct();
-
+		log.debug("----------------------------------------loginacct={}", loginacct);
 		// 表单校验
 		if (!StringUtils.isEmpty(loginacct)) {
 			// 去redis拿验证码校验
@@ -79,12 +79,15 @@ public class UserLoginRegistController {
 			if (!StringUtils.isEmpty(code)) {
 				// 判断验证码一致
 				if (code.equals(vo.getCode())) {
+					log.debug("----------------------------------------验证码校验成功");
 					// 校验账号是否唯一
 
 					// 保存数据
 					int i = memberService.saveTMember(vo);
+					log.debug("----------------------------------------保存数据成功");
 					if (i == 1) {
 						stringRedisTemplate.delete(loginacct);// 手动清除缓存
+						log.debug("----------------------------------------清楚缓存成功");
 						return AppResponse.ok("ok");
 					} else {
 						return AppResponse.fail(null);
