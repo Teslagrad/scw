@@ -10,6 +10,7 @@ import com.atguigu.scw.vo.resp.AppResponse;
 import com.atguigu.scw.webui.service.exp.handler.TProjectServiceFeignExceptionHandler;
 import com.atguigu.scw.webui.vo.resp.ProjectDetailVo;
 import com.atguigu.scw.webui.vo.resp.ProjectVo;
+import com.atguigu.scw.webui.vo.resp.ReturnPayConfirmVo;
 
 @FeignClient(value = "SCW-PROJECT", fallback = TProjectServiceFeignExceptionHandler.class)
 public interface TProjectServiceFeign {
@@ -19,5 +20,9 @@ public interface TProjectServiceFeign {
 
 	@GetMapping("/project/details/info/{projectId}")
 	public AppResponse<ProjectDetailVo> detailsInfo(@PathVariable("projectId") Integer projectId);
+
+	@GetMapping("/project/confirm/returns/{projectId}/{returnId}")
+	public AppResponse<ReturnPayConfirmVo> returnInfo(@PathVariable("projectId") Integer projectId,
+			@PathVariable("returnId") Integer returnId);
 
 }

@@ -11,10 +11,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.atguigu.scw.user.bean.TMember;
+import com.atguigu.scw.user.bean.TMemberAddress;
+import com.atguigu.scw.user.bean.TMemberAddressExample;
 import com.atguigu.scw.user.bean.TMemberExample;
 import com.atguigu.scw.user.component.SmsTemplate;
 import com.atguigu.scw.user.enums.UserExceptionEnum;
 import com.atguigu.scw.user.exp.UserException;
+import com.atguigu.scw.user.mapper.TMemberAddressMapper;
 import com.atguigu.scw.user.mapper.TMemberMapper;
 import com.atguigu.scw.user.service.TMemberService;
 import com.atguigu.scw.user.vo.req.UserRegistVo;
@@ -34,6 +37,9 @@ public class TMemberServiceImpl implements TMemberService {
 
 	@Autowired
 	StringRedisTemplate stringRedisTemplate;
+
+	@Autowired
+	TMemberAddressMapper memberAddressMapper;
 
 	// @Transactional(propagation = Propagation.REQUIRED, isolation =
 	// Isolation.REPEATABLE_READ)//默认runtimes异常回滚
@@ -102,5 +108,15 @@ public class TMemberServiceImpl implements TMemberService {
 		TMember member = memberMapper.selectByPrimaryKey(id);
 		member.setUserpswd(null);// 不返回vo了，懒，直接把密码去了，不用返回密码，安全的点
 		return member;
+	}
+
+	@Override
+	public List<TMemberAddress> ListAddress(Integer memberId) {
+		// 通过外键查出地址列表
+		TMemberAddressExample example = new TMemberAddressExample();
+
+		example.createCriteria().andMemberidEqualTo(memberId);
+		List<TMemberAddress> list = memberAddressMapper.selectByExample(example);
+		return list;
 	}
 }

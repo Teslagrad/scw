@@ -184,18 +184,18 @@
                                       </thead>
                                       <tbody>
                                         <tr>
-                                          <td>活性富氢净水直饮机</td>
-                                          <td>深圳市博实永道电子商务有限公司</td>
-                                          <td>每满1750人抽取一台活性富氢净水直饮机，至少抽取一台。抽取名额（小数点后一位四舍五入）=参与人数÷1750人，由苏宁官方抽取。</td>
-                                          <td><input type="text" class="form-control" style="width:60px;" value="1"></td>
-                                          <td style="color:#F60">￥ 1.00</td>
-                                          <td>免运费</td>
+                                          <td th:text="${returnPayConfirmVo.projectName}">活性富氢净水直饮机</td>
+                                          <td th:text="${returnPayConfirmVo.memberName}">深圳市博实永道电子商务有限公司</td>
+                                          <td th:text="${returnPayConfirmVo.returnContent}">每满1750人抽取一台活性富氢净水直饮机，至少抽取一台。抽取名额（小数点后一位四舍五入）=参与人数÷1750人，由苏宁官方抽取。</td>
+                                          <td><input id="num" type="text" class="form-control" style="width:60px;" value="1"></td>
+                                          <td style="color:#F60" th:text="|￥${returnPayConfirmVo.price}|">￥ 1.00</td>
+                                          <td th:text="${returnPayConfirmVo.freight==0?'免运费':'运费：'+returnPayConfirmVo.freight}">免运费</td>
                                         </tr>
                                       </tbody>
                                     </table>
                                     <div style="float:right;">
-                                    <p>总价(含运费)：<span style="font-size:16px;color:#F60;">￥1.00</span></p>
-                                    <button type="button" class="btn btn-warning btn-lg" style="float:right;" onclick="window.location.href='pay-step-2.html'"><i class="glyphicon glyphicon-credit-card"></i> 去结算</button>
+                                    <!-- <p th:text="|总价(含运费)：￥${returnPayConfirmVo.totalPrice}|">总价(含运费)：<span style="font-size:16px;color:#F60;">￥1.00</span></p> -->
+                                    <button type="button" id="confirmOrderBtn" class="btn btn-warning btn-lg" style="float:right;"  th:href="@{/project/confirm/order}"><i class="glyphicon glyphicon-credit-card"></i> 去结算</button>
                                     </div>
                                 </div>
                                 
@@ -234,6 +234,10 @@ $('#myTab a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
 })
+
+$("#confirmOrderBtn").click(function(){
+	window.location.href=$(this).attr("href")+"/"+$("#num").val();
+});
 	</script>
   </body>
 </html>

@@ -8,6 +8,7 @@ import com.atguigu.scw.vo.resp.AppResponse;
 import com.atguigu.scw.webui.service.TProjectServiceFeign;
 import com.atguigu.scw.webui.vo.resp.ProjectDetailVo;
 import com.atguigu.scw.webui.vo.resp.ProjectVo;
+import com.atguigu.scw.webui.vo.resp.ReturnPayConfirmVo;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -18,8 +19,8 @@ public class TProjectServiceFeignExceptionHandler implements TProjectServiceFeig
 	@Override
 	public AppResponse<List<ProjectVo>> all() {
 		AppResponse resp = AppResponse.fail(null);
-		resp.setMsg("请求【热点数据】---------------------------------------------------失败");
-		log.debug("请求【热点数据】---------------------------------------------------失败");
+		resp.setMsg("请求【热点数据】#####################################################失败");
+		log.debug("请求【热点数据】#####################################################失败");
 		return resp;
 
 	}
@@ -27,8 +28,16 @@ public class TProjectServiceFeignExceptionHandler implements TProjectServiceFeig
 	@Override
 	public AppResponse<ProjectDetailVo> detailsInfo(Integer projectId) {
 		AppResponse resp = AppResponse.fail(null);
-		resp.setMsg("请求【项目详情】---------------------------------------------------失败");
-		log.debug("请求【项目详情】---------------------------------------------------失败");
+		resp.setMsg("请求【项目详情】#####################################################失败");
+		log.debug("请求【项目详情】#####################################################失败");
+		return resp;
+	}
+
+	@Override
+	public AppResponse<ReturnPayConfirmVo> returnInfo(Integer projectId, Integer returnId) {
+		AppResponse resp = AppResponse.fail(null);
+		resp.setMsg("请求【项目服务】【确认项目回报信息】#####################################################失败");
+		log.debug("请求【项目服务】【确认项目回报信息】#####################################################失败");
 		return resp;
 	}
 

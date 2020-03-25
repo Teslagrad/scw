@@ -1,33 +1,35 @@
 package com.atguigu.scw.user.bean;
 
-public class TMemberAddress {
-    private Integer id;
+import java.io.Serializable;
 
-    private Integer memberid;
+public class TMemberAddress implements Serializable {
+	private Integer id;
 
-    private String address;
+	private Integer memberid;
 
-    public Integer getId() {
-        return id;
-    }
+	private String address;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public Integer getMemberid() {
-        return memberid;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public void setMemberid(Integer memberid) {
-        this.memberid = memberid;
-    }
+	public Integer getMemberid() {
+		return memberid;
+	}
 
-    public String getAddress() {
-        return address;
-    }
+	public void setMemberid(Integer memberid) {
+		this.memberid = memberid;
+	}
 
-    public void setAddress(String address) {
-        this.address = address == null ? null : address.trim();
-    }
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address == null ? null : address.trim();
+	}
 }
