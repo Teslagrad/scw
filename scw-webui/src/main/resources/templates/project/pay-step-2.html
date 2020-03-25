@@ -96,6 +96,8 @@
       </div>
     </div>
 
+<form id="payOrderForm" th:action="@{/order/pay}" method="post">
+
     <div class="container theme-showcase" role="main">        
         
         <div class="container">
@@ -181,7 +183,7 @@
                                 <div class="col-md-12 column" style="padding:0 120px;">
                                     <div class="radio" th:each="userAddressVo:${memberAddressList}" onclick="$('#addressPanel').hide()">
                                       <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                        <input type="radio" name="address"  th:value="${userAddressVo.address}" checked>
                                         [[${userAddressVo.address}]]
                                       </label>
                                     </div>
@@ -243,13 +245,13 @@
                                 <div class="col-md-12 column" style="padding:0 120px;"> 
                                     <div class="radio"  onclick="$('#billBody').hide()">
                                       <label>
-                                        <input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked >
+                                        <input type="radio" name="invoice" value="0" checked >
                                         无需发票
                                       </label>
                                     </div>
                                     <div class="radio" onclick="$('#billBody').show()"> 
                                       <label>
-                                        <input type="radio" name="optionsRadios1" id="optionsRadios2" value="option2">
+                                        <input type="radio" name="invoice" value="1">
                                         需要发票
                                       </label>
                                     </div>
@@ -265,7 +267,7 @@
                                                   <div class="form-group">
                                                     <label class="col-sm-2 control-label">发票抬头（*）</label>
                                                     <div class="col-sm-10">
-                                                      <input type="text" class="form-control" style="width:200px;" placeholder="个人" >
+                                                      <input type="text" name="invoictitle"  class="form-control" style="width:200px;" placeholder="个人" >
                                                     </div>
                                                   </div>
                                                 </form>
@@ -312,7 +314,7 @@
                                   <div class="form-group">
                                     <label class="col-sm-2 control-label">备注</label>
                                     <div class="col-sm-10">
-                                      <textarea class="form-control" rows="1" placeholder="填写关于回报或发起人希望您备注的信息"></textarea>
+                                      <textarea class="form-control" name="remark" rows="3" placeholder="填写关于回报或发起人希望您备注的信息"></textarea>
                                     </div>
                                   </div>
                                 </div>
@@ -327,10 +329,10 @@
                                 <div class="col-md-12 column">
                                         <div class="alert alert-warning alert-dismissable" style="text-align:right; border:2px solid #ffc287;">
                                             <ul style="list-style:none;" >
-                                                <li style="margin-top:10px;">支持金额：<span style="color:red;">￥[[${session.returnPayConfirmVoSession.totalPrice}]].00</span></li>
+                                                <li style="margin-top:10px;">支持金额：<span style="color:red;">￥[[${session.returnPayConfirmVoSession.totalPrice}-${session.returnPayConfirmVoSession.freight==0?0:session.returnPayConfirmVoSession.freight}]].00</span></li>
                                                 <li style="margin-top:10px;">配送费用：<span style="color:red;">￥[[${session.returnPayConfirmVoSession.freight==0?'免运费':session.returnPayConfirmVoSession.freight+'.00'}]]</span></li>
                                                 <li style="margin-top:10px;">优惠金额：<span style="color:red;">-￥0.00</span></li>
-                                                <li style="margin-top:10px;margin-bottom:10px;"><h2>支付总金额：<span style="color:red;">￥[[${session.returnPayConfirmVoSession.totalPrice}-${session.returnPayConfirmVoSession.freight==0?0:session.returnPayConfirmVoSession.freight}]].00</span></h2></li>
+                                                <li style="margin-top:10px;margin-bottom:10px;"><h2>支付总金额：￥[[${session.returnPayConfirmVoSession.totalPrice}]].00<span style="color:red;"></span></h2></li>
                                                 <li style="margin-top:10px;padding:5px;border:1px solid #F00;display:initial;background:#FFF;">
                                                     <i class="glyphicon glyphicon-info-sign"></i> <strong>您需要先 <a href="#address">设置配送信息</a> ,再提交订单</strong> 
                                                 </li>
@@ -338,7 +340,7 @@
                                                 请在下单后15分钟内付款，否则您的订单会被自动关闭。
                                                 </li>
                                                 <li style="margin-top:10px;">
-                                                <button disabled="disabled" type="button" class="btn btn-warning btn-lg" onclick="window.location.href='pay-step-3.html'"><i class="glyphicon glyphicon-credit-card"></i> 立即付款</button>
+                                                <button id="payOrderBtn" type="button" class="btn btn-warning btn-lg" ><i class="glyphicon glyphicon-credit-card"></i> 立即付款</button>
                                                 </li>
                                                 <li style="margin-top:10px;">
                                                   <div class="checkbox">
@@ -382,12 +384,20 @@
 
         
    <div th:include="~{include/include::#footer}"></div>
-    <div th:include="~{include/include::#jsStyle}"></div>
+   
+    
+</form>
+ <div th:include="~{include/include::#jsStyle}"></div>
 	<script>
 $('#myTab a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
 })
+
+$("#payOrderBtn").click(function(){
+	$("#payOrderForm").submit();
+});
+
 	</script>
   </body>
 </html>
