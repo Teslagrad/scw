@@ -96,4 +96,11 @@ public class TMemberServiceImpl implements TMemberService {
 
 		return vo;
 	}
+
+	@Override
+	public TMember getMemberById(Integer id) {
+		TMember member = memberMapper.selectByPrimaryKey(id);
+		member.setUserpswd(null);// 不返回vo了，懒，直接把密码去了，不用返回密码，安全的点
+		return member;
+	}
 }

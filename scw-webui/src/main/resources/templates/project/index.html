@@ -193,7 +193,7 @@
 						<div class="panel-body">
                             <p>配送费：[[${retObj.freight==0?'包邮':retObj.freight+"元"}]]</p>
                             <p>预计发放时间：项目筹款成功后的[[${retObj.rtndate}]]天内</p>
-                            <button type="button" class="btn  btn-warning btn-lg " onclick="window.location.href='pay-step-1.html'" th:href="@{/project/support/{projectId}/{returnId}(projectId=${projectDetailVo.id},returnId=${retObj.id})}">支持</button>
+                            <button type="button" class="supportBtn btn  btn-warning btn-lg " th:href="@{/project/support/{projectId}/{returnId}(projectId=${projectDetailVo.id},returnId=${retObj.id})}">支持</button>
                             <br><br>
                             <p th:text="${retObj.content}">感谢您的支持，在众筹开始后，您将以79元的优惠价格获得“遇见彩虹?”智能插座一件（参考价208元）。</p>
 						</div>
@@ -265,7 +265,8 @@
 			<h2 id="section-1" th:id="|section-${status.count}|" style="border-bottom:1px dashed #ddd;" ><span style="font-size:20px;font-weight:bold;" th:text="'￥'+${retObj.supportmoney}">￥1.00</span><span style="font-size:12px;margin-left:60px;" th:text="${retObj.signalpurchase==0?'无限额':'限额'+retObj.signalpurchase+'份'}">无限额，223位支持者</span></h2>
             <p>配送费用：[[${retObj.freight==0?'包邮':retObj.freight+"元"}]]</p>
             <p>预计发放时间：项目筹款成功后的[[${retObj.rtndate}]]天内</p>
-            <button type="button" class="btn  btn-warning btn-lg " onclick="window.location.href='pay-step-1.html'" th:href="@{/project/support/{projectId}/{returnId}(projectId=${projectDetailVo.id},returnId=${retObj.id})}">支持</button>
+           <button type="button" class="supportBtn btn  btn-warning btn-lg " 
+           th:href="@{/project/support/{projectId}/{returnId}(projectId=${projectDetailVo.id},returnId=${retObj.id})}">支持</button>
             <br><br>
             <p th:text="${retObj.content}">每满1750人抽取一台活性富氢净水直饮机，至少抽取一台。抽取名额（小数点后一位四舍五入）=参与人数÷1750人，由苏宁官方抽取。</p>
 		</div>
@@ -283,10 +284,11 @@
     <div th:include="~{include/include::#jsStyle}"></div>
     
 	<script>
-    $(".prjtip img").css("cursor", "pointer");
-    $(".prjtip img").click(function(){
-        window.location.href = 'project.html';
-    });
+
+		$(".supportBtn").click(function(){
+			window.location.href= $(this).attr('href');
+		});
+	
 	</script>
   </body>
 </html>

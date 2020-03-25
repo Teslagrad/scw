@@ -26,3 +26,8 @@ server:
 swagger2:
   enable: true
 
+feign:
+  hystrix:
+     enabled: true
+
+

@@ -3,20 +3,32 @@ package com.atguigu.scw.webui.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.atguigu.scw.vo.resp.AppResponse;
 import com.atguigu.scw.webui.service.TProjectServiceFeign;
 import com.atguigu.scw.webui.vo.resp.ProjectDetailVo;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Controller
 public class TProjectController {
 	@Autowired
 	TProjectServiceFeign projectServiceFeign;
 
+	// 支持
 	@RequestMapping("/project/support/{projectId}/{returnId}")
-	public String support(Integer projectId, Integer returnId, Model model) {
+	public String support(@PathVariable("projectId") Integer projectId, @PathVariable("returnId") Integer returnId,
+			Model model) {
 
+//		AppResponse<ReturnPayConfirmVo> resp = projectServiceFeign.returnInfo(projectId, returnId);
+//		ReturnPayConfirmVo data = resp.getData();
+//
+//		model.addAttribute("returnPayConfirmVo", data);
+//		session.setAttribute("returnPayConfirmVoSession", data);
+		log.debug("到了没。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。");
 		return "project/pay-step-1";
 	}
 
