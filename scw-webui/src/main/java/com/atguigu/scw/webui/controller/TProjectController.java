@@ -29,7 +29,7 @@ public class TProjectController {
 	@Autowired
 	TMemberServiceFeign memberServiceFeign;
 
-	// 确认订单
+	// 去结算
 	@RequestMapping("/project/confirm/order/{num}")
 	public String confirmOrder(@PathVariable("num") Integer num, Model model, HttpSession session) {// @PathVariable占位符过来的参数要加
 
@@ -37,6 +37,8 @@ public class TProjectController {
 		UserRespVo vo = (UserRespVo) session.getAttribute("loginMember");
 
 		if (vo == null) {
+			session.setAttribute("preUrl", "/project/confirm/order/" + num);
+
 			return "redirect:/login";
 		}
 

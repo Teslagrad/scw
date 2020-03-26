@@ -61,7 +61,7 @@ public class TMemberServiceImpl implements TMemberService {
 			return i;
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			//
 			e.printStackTrace();
 			log.error("注册会员失败-{}", e.getMessage());
 			// throw new RuntimeException("保存会员业务逻辑失败");

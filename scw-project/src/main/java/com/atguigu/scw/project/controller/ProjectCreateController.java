@@ -92,7 +92,7 @@ public class ProjectCreateController {
 
 			return AppResponse.ok(bigVo);// appresonse组件属于jackson组件,可以把apprespone对象转换成json
 		} catch (BeansException e) {
-			// TODO Auto-generated catch block
+			//
 			e.printStackTrace();
 			log.debug("表单处理失败", e.getMessage());
 			return AppResponse.fail(null);
@@ -137,7 +137,7 @@ public class ProjectCreateController {
 
 			return AppResponse.ok(bigVo);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			//
 			e.printStackTrace();
 			log.debug("表单处理失败", e.getMessage());
 			return AppResponse.fail(null);
@@ -190,7 +190,7 @@ public class ProjectCreateController {
 			log.debug("大vo数据：{}", bigVo);
 			return AppResponse.ok(bigVo);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			//
 			e.printStackTrace();
 			log.debug("表单处理失败", e.getMessage());
 			return AppResponse.fail(null);
@@ -237,7 +237,7 @@ public class ProjectCreateController {
 			}
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			//
 			e.printStackTrace();
 			log.debug("项目操作失败-{}", e.getMessage());
 			return AppResponse.fail(null);

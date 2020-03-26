@@ -1,4 +1,4 @@
-package com.atguigu.scw.order.bean;
+package com.atguigu.scw.webui.vo.resp;
 
 import java.io.Serializable;
 

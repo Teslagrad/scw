@@ -277,7 +277,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.atguigu.scw.order.bean.TOrder">
+  <update id="updateByPrimaryKeySelective" parameterType="com.atguigu.scw.order.bean.TOrder" useGeneratedKeys="true" keyProperty="id">
     update t_order
     <set>
       <if test="memberid != null">

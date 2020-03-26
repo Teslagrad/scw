@@ -53,7 +53,7 @@ public class UserLoginRegistController {
 			log.debug("登录成功-{}", loginacct);
 			return AppResponse.ok(vo);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			//
 			e.printStackTrace();
 
 			log.debug("登录失败-{}", loginacct);

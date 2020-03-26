@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<div th:include="~{include/include::cssStyle}"></div>
+	<link rel="stylesheet" href="css/theme.css" th:href="@{/static/css/theme.css}">
 	<style>
 #footer {
     padding: 15px 0;
@@ -79,7 +80,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="thumbnail" style="    border-radius: 0px;">
-						<img src="img/services-box1.jpg" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
+						<img src="img/services-box1.jpg" th:src="@{/static/img/services-box1.jpg}" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
 						<div class="caption" style="text-align:center;">
 							<h3>
 								ZhangSan

@@ -71,30 +71,7 @@
 	</style>
   </head>
   <body>
- <div class="navbar-wrapper">
-      <div class="container">
-			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			  <div class="container">
-				<div class="navbar-header">
-				  <a class="navbar-brand" href="index.html" style="font-size:32px;">尚筹网-创意产品众筹平台</a>
-				</div>
-            <div id="navbar" class="navbar-collapse collapse" style="float:right;">
-              <ul class="nav navbar-nav">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> 张三<span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="member.html"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
-                    <li class="divider"></li>
-                    <li><a href="index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-			  </div>
-			</nav>
-      </div>
-    </div>
+<div th:include="~{include/include::topBar}"></div>
 
 <form id="payOrderForm" th:action="@{/order/pay}" method="post">
 
@@ -330,12 +307,12 @@
                                         <div class="alert alert-warning alert-dismissable" style="text-align:right; border:2px solid #ffc287;">
                                             <ul style="list-style:none;" >
                                                 <li style="margin-top:10px;">支持金额：<span style="color:red;">￥[[${session.returnPayConfirmVoSession.totalPrice}-${session.returnPayConfirmVoSession.freight==0?0:session.returnPayConfirmVoSession.freight}]].00</span></li>
-                                                <li style="margin-top:10px;">配送费用：<span style="color:red;">￥[[${session.returnPayConfirmVoSession.freight==0?'免运费':session.returnPayConfirmVoSession.freight+'.00'}]]</span></li>
+                                                <li style="margin-top:10px;">配送费用：<span style="color:red;">[[${session.returnPayConfirmVoSession.freight==0?'免运费':'￥'+session.returnPayConfirmVoSession.freight+'.00'}]]</span></li>
                                                 <li style="margin-top:10px;">优惠金额：<span style="color:red;">-￥0.00</span></li>
                                                 <li style="margin-top:10px;margin-bottom:10px;"><h2>支付总金额：￥[[${session.returnPayConfirmVoSession.totalPrice}]].00<span style="color:red;"></span></h2></li>
-                                                <li style="margin-top:10px;padding:5px;border:1px solid #F00;display:initial;background:#FFF;">
-                                                    <i class="glyphicon glyphicon-info-sign"></i> <strong>您需要先 <a href="#address">设置配送信息</a> ,再提交订单</strong> 
-                                                </li>
+                                               <!--<li style="margin-top:10px;padding:5px;border:1px solid #F00;display:initial;background:#FFF;">
+                                                      <i  class="glyphicon glyphicon-info-sign"></i> <strong>您需要先 <a href="#address">设置配送信息</a> ,再提交订单</strong> 
+                                                </li>-->
                                                 <li style="margin-top:10px;">
                                                 请在下单后15分钟内付款，否则您的订单会被自动关闭。
                                                 </li>

@@ -1,4 +1,4 @@
-package com.atguigu.scw.project.bean;
+package com.atguigu.scw.order.vo.resp;
 
 import java.io.Serializable;
 

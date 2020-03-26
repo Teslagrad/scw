@@ -40,7 +40,7 @@ public class OssTemplate {
 			// 返回文件名
 			return filePath;
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			//
 			e.printStackTrace();
 			log.debug("文件上传失败-{}", filename);
 			return null;
