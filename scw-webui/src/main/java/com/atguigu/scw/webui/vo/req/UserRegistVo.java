@@ -1,4 +1,4 @@
-package com.atguigu.scw.user.vo.req;
+package com.atguigu.scw.webui.vo.req;
 
 import java.io.Serializable;
 
@@ -11,6 +11,7 @@ import lombok.ToString;
 @ApiModel
 @Data
 public class UserRegistVo implements Serializable {
+
 	@ApiModelProperty("手机号")
 	private String loginacct;
 	@ApiModelProperty("密码")

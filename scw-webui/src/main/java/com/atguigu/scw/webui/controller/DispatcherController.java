@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.atguigu.scw.vo.resp.AppResponse;
 import com.atguigu.scw.webui.service.TMemberServiceFeign;
@@ -30,6 +31,54 @@ public class DispatcherController {
 	TProjectServiceFeign projectServiceFeign;
 	@Autowired
 	RedisTemplate redisTemplate;
+
+//	@RequestMapping("/doRegister")
+//	public String doRegister(UserRegistVo vo) {
+//		// 调用远程注册服务
+//		AppResponse<Object> resp = memberServiceFeign.register(vo);
+//		String result = (String) resp.getData();
+//
+//		if (result == "ok") {
+//			return "redirect:/login";
+//		} else {
+//			return "register";
+//		}
+//
+//	}
+
+	@RequestMapping("/doRegister")
+	public String doRegister(String loginacct, String userpswd, String email, String code, String usertype) {
+		// 调用远程注册服务
+		AppResponse<Object> resp = memberServiceFeign.register(loginacct, userpswd, email, code, usertype);
+		String result = (String) resp.getData();
+
+		log.debug("########################################---result={}", result);
+
+		if (result.equals("ok")) {
+			return "redirect:/login";
+		} else {
+			return "register";
+		}
+
+	}
+
+	@ResponseBody
+	@RequestMapping("/sendMsg")
+	public String doRegister(String loginacct) {
+		// 调用短信服务
+		log.debug("拿到手机号########################################{}", login());
+
+		AppResponse<Object> resp = memberServiceFeign.sendsms(loginacct);
+		String result = (String) resp.getData();
+		log.debug("发送验证码########################################{}", result);
+		return result;
+	}
+
+	@RequestMapping("/register")
+	public String register() {
+
+		return "register";
+	}
 
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) {

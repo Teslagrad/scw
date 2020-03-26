@@ -20,7 +20,6 @@ import com.atguigu.scw.user.exp.UserException;
 import com.atguigu.scw.user.mapper.TMemberAddressMapper;
 import com.atguigu.scw.user.mapper.TMemberMapper;
 import com.atguigu.scw.user.service.TMemberService;
-import com.atguigu.scw.user.vo.req.UserRegistVo;
 import com.atguigu.scw.user.vo.resp.UserRespVo;
 
 import lombok.extern.slf4j.Slf4j;
@@ -45,14 +44,17 @@ public class TMemberServiceImpl implements TMemberService {
 	// Isolation.REPEATABLE_READ)//默认runtimes异常回滚
 	@Transactional
 	@Override
-	public int saveTMember(UserRegistVo vo) {
+	public int saveTMember(String loginacct, String userpswd, String email, String code, String usertype) {
 		try {
 			// vo属性对拷到do
 			TMember member = new TMember();
-			BeanUtils.copyProperties(vo, member);
-			member.setUsername(vo.getLoginacct());
+			member.setLoginacct(loginacct);
+			member.setUserpswd(userpswd);
+			member.setEmail(email);
+			member.setUsertype(usertype);
 
-			String userpswd = vo.getUserpswd();
+			member.setUsername(loginacct);
+
 			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 			member.setUserpswd(encoder.encode(userpswd));
 

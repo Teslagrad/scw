@@ -22,4 +22,12 @@ public interface TMemberServiceFeign {
 
 	@GetMapping("/user/info/address")
 	public AppResponse<List<UserAddressVo>> address(@RequestParam("accessToken") String accessToken);
+
+	@PostMapping("/user/sendsms")
+	public AppResponse<Object> sendsms(@RequestParam("loginacct") String loginacct);
+
+	@PostMapping("/user/register")
+	public AppResponse<Object> register(@RequestParam("loginacct") String loginacct,
+			@RequestParam("userpswd") String userpswd, @RequestParam("email") String email,
+			@RequestParam("code") String code, @RequestParam("usertype") String usertype);
 }

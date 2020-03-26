@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.atguigu.scw.user.component.SmsTemplate;
 import com.atguigu.scw.user.service.TMemberService;
-import com.atguigu.scw.user.vo.req.UserRegistVo;
 import com.atguigu.scw.user.vo.resp.UserRespVo;
 import com.atguigu.scw.vo.resp.AppResponse;
 
@@ -67,23 +66,23 @@ public class UserLoginRegistController {
 
 	@ApiOperation(value = "用户注册")
 	@PostMapping("/register")
-	public AppResponse<Object> register(UserRegistVo vo) {
+	public AppResponse<Object> register(String loginacct, String userpswd, String email, String code, String usertype) {
+		log.debug("----------------------------------------vo={}", loginacct);
+		AppResponse<Object> response = null;
 
-		String loginacct = vo.getLoginacct();
-		log.debug("----------------------------------------loginacct={}", loginacct);
 		// 表单校验
 		if (!StringUtils.isEmpty(loginacct)) {
 			// 去redis拿验证码校验
-			String code = stringRedisTemplate.opsForValue().get(loginacct);
+			String RedisCode = stringRedisTemplate.opsForValue().get(loginacct);
 
-			if (!StringUtils.isEmpty(code)) {
+			if (!StringUtils.isEmpty(RedisCode)) {
 				// 判断验证码一致
-				if (code.equals(vo.getCode())) {
+				if (RedisCode.equals(code)) {
 					log.debug("----------------------------------------验证码校验成功");
 					// 校验账号是否唯一
 
 					// 保存数据
-					int i = memberService.saveTMember(vo);
+					int i = memberService.saveTMember(loginacct, userpswd, email, code, usertype);
 					log.debug("----------------------------------------保存数据成功");
 					if (i == 1) {
 						stringRedisTemplate.delete(loginacct);// 手动清除缓存

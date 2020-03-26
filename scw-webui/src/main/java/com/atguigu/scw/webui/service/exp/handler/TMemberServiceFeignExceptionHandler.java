@@ -35,6 +35,26 @@ public class TMemberServiceFeignExceptionHandler implements TMemberServiceFeign 
 		return resp;
 	}
 
+	@Override
+	public AppResponse<Object> sendsms(String loginacct) {
+		AppResponse<Object> resp = AppResponse.fail(null);
+		resp.setMsg("调用远程【用户服务】【发送验证码】失败");
+
+		log.error("调用远程【用户服务】【发送验证码】失败");
+
+		return resp;
+	}
+
+	@Override
+	public AppResponse<Object> register(String loginacct, String userpswd, String email, String code, String usertype) {
+		AppResponse<Object> resp = AppResponse.fail(null);
+		resp.setMsg("调用远程【用户服务】【用户注册】失败");
+
+		log.error("调用远程【用户服务】【用户注册】失败");
+
+		return resp;
+	}
+
 //	@Override
 //	public AppResponse<List<UserAddressVo>> address(String accessToken) {
 //		AppResponse<List<UserAddressVo>> resp = AppResponse.fail(null);

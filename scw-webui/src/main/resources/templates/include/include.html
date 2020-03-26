@@ -18,6 +18,7 @@
     <script src="bootstrap/js/bootstrap.min.js" th:src="@{/static/bootstrap/js/bootstrap.min.js}"></script>
 	<script src="script/docs.min.js" th:src="@{/static/script/docs.min.js}"></script>
     <script src="script/back-to-top.js" th:src="@{/static/script/back-to-top.js}"></script>
+    <script src="jquery/layer/layer.js" th:src="@{/static/jquery/layer/layer.js}"></script>
 </div>
 
 <div th:fragment="topBar">
@@ -33,7 +34,7 @@
 	            <div id="navbar" class="navbar-collapse collapse" style="float:right;" th:if="${session.loginMember==null}">
 	              <ul class="nav navbar-nav navbar-right">
 	                <li><a href="login.html" th:href="@{/login}">登录</a></li>
-	                <li><a href="reg.html">注册</a></li>
+	                <li><a href="reg.html" th:href="@{/register}">注册</a></li>
 	              </ul>
 	            </div>
             

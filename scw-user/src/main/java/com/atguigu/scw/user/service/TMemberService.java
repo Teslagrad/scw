@@ -4,12 +4,11 @@ import java.util.List;
 
 import com.atguigu.scw.user.bean.TMember;
 import com.atguigu.scw.user.bean.TMemberAddress;
-import com.atguigu.scw.user.vo.req.UserRegistVo;
 import com.atguigu.scw.user.vo.resp.UserRespVo;
 
 public interface TMemberService {
 
-	int saveTMember(UserRegistVo vo);
+	int saveTMember(String loginacct, String userpswd, String email, String code, String usertype);
 
 	UserRespVo getUserByLogin(String loginacct, String password);
 
