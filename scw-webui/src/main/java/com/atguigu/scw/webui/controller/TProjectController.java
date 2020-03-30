@@ -6,6 +6,7 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +16,9 @@ import com.atguigu.scw.vo.resp.AppResponse;
 import com.atguigu.scw.webui.service.TMemberServiceFeign;
 import com.atguigu.scw.webui.service.TProjectServiceFeign;
 import com.atguigu.scw.webui.vo.req.BaseVo;
+import com.atguigu.scw.webui.vo.resp.ProjectBaseInfoVo;
 import com.atguigu.scw.webui.vo.resp.ProjectDetailVo;
+import com.atguigu.scw.webui.vo.resp.ProjectRedisStorageVo;
 import com.atguigu.scw.webui.vo.resp.ReturnPayConfirmVo;
 import com.atguigu.scw.webui.vo.resp.UserAddressVo;
 import com.atguigu.scw.webui.vo.resp.UserRespVo;
@@ -30,12 +33,46 @@ public class TProjectController {
 	@Autowired
 	TMemberServiceFeign memberServiceFeign;
 
+	@Autowired
+	StringRedisTemplate stringRedisTemplate;
+
+	@RequestMapping("/project/startBaseInfo")
+	public String startBaseInfo(ProjectBaseInfoVo vo, HttpSession session) {
+
+		UserRespVo userRespVo = (UserRespVo) session.getAttribute("loginMember");
+		if (vo == null) {
+			session.setAttribute("preUrl", "/project/startBaseInfo");
+
+			return "redirect:/login";
+		}
+
+		String accessToken = userRespVo.getAccessToken();
+
+		vo.setAccessToken(accessToken);
+
+		log.debug("##################################accessToken=={}", accessToken);
+
+		String projectToken = (String) session.getAttribute("projectToken");
+
+		vo.setProjectToken(projectToken);
+
+		log.debug("##################################ProjectBaseInfoVo=={}", vo);
+
+		AppResponse<ProjectRedisStorageVo> resp = projectServiceFeign.baseinfo(vo);
+		ProjectRedisStorageVo data = resp.getData();
+
+		log.debug("##################################step-1-data----{}", data);
+
+		return "project/start-step-2";
+	}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	@RequestMapping("/project/startInfo")
 	public String startInfo(HttpSession session) {
 
 		UserRespVo vo = (UserRespVo) session.getAttribute("loginMember");
 		if (vo == null) {
-			session.setAttribute("preUrl", "/project/start");
+			session.setAttribute("preUrl", "/project/startInfo");
 
 			return "redirect:/login";
 		}
@@ -47,8 +84,11 @@ public class TProjectController {
 		BaseVo baseVo = new BaseVo();
 		baseVo.setAccessToken(accessToken);
 
-		AppResponse<Object> resp = projectServiceFeign.init(baseVo);
-		Object data = resp.getData();
+		AppResponse<ProjectRedisStorageVo> resp = projectServiceFeign.init(baseVo);
+		ProjectRedisStorageVo data = resp.getData();
+
+		String projectToken = data.getProjectToken();
+		session.setAttribute("projectToken", projectToken);
 
 		log.debug("##################################ProjectRedisStorageVo=={}", data);
 

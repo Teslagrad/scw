@@ -53,7 +53,7 @@ public class ProjectCreateController {
 
 	@ApiOperation(value = "1-项目初始创建")
 	@PostMapping("/init")
-	public AppResponse<Object> init(@RequestBody BaseVo vo) {
+	public AppResponse<ProjectRedisStorageVo> init(@RequestBody BaseVo vo) {
 		log.debug("###################################################################initing...");
 		try {
 			// 校验判断用户token是否为空
@@ -83,6 +83,8 @@ public class ProjectCreateController {
 
 			bigVo.setProjectToken(projectToken);
 
+			// session也存，方便取
+
 			log.debug("###################################################################bigVo...{}", bigVo);
 
 			// vo转为json
@@ -103,8 +105,8 @@ public class ProjectCreateController {
 
 	@ApiOperation(value = "2-项目基本信息")
 	@PostMapping("/baseinfo")
-	public AppResponse<Object> baseinfo(ProjectBaseInfoVo vo) {
-
+	public AppResponse<ProjectRedisStorageVo> baseinfo(@RequestBody ProjectBaseInfoVo vo) {
+		log.debug("##############################got----vo=={}", vo);
 		try {
 			// 校验判断用户token是否为空
 			String accessToken = vo.getAccessToken();
@@ -129,6 +131,8 @@ public class ProjectCreateController {
 
 			// json转vo
 			ProjectRedisStorageVo bigVo = JSON.parseObject(bigJson, ProjectRedisStorageVo.class);
+
+			log.debug("##############################got----保存基本信息完毕=={}");
 
 			BeanUtils.copyProperties(vo, bigVo);
 

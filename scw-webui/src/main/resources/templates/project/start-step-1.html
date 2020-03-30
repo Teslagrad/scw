@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<div th:include="~{include/include::cssStyle}"></div>
+	<link rel="stylesheet" href="css/theme.css" th:href="@{/static/css/theme.css}" >
 	<style>
 #footer {
     padding: 15px 0;
@@ -198,21 +199,22 @@
 					项目信息
 				</h3>
 			</div>
-            <form class="form-horizontal">
+			
+            <form class="form-horizontal" id="startStep1Form" th:action="@{/project/startBaseInfo}" method="post">
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">分类信息</label>
                 <div class="col-sm-10">
                      <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 科技
+                      <input type="radio" name="typeids" id="typeids" value="1"> 科技
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 设计
+                      <input type="radio" name="typeids" id="typeids" value="2"> 设计
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 公益
+                      <input type="radio" name="typeids" id="typeids" value="3"> 公益
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 农业
+                      <input type="radio" name="typeids" id="typeids" value="4"> 农业
                     </label>
                 </div>
               </div>
@@ -220,41 +222,41 @@
                 <label for="inputEmail3" class="col-sm-2 control-label">标签</label>
                 <div class="col-sm-10">
                     <ul style="list-style:none;padding-left:0;">
-                        <li style="margin:10px 0">[手机]
-                            <span class="label-txt">手机</span> <span class="label-txt">快充</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span>
+                        <li style="margin:10px 0" name="tagids" value="1">[手机]
+                            <span class="label-txt"><input type="checkbox" name="tagids" value="2" />手机</span> <span class="label-txt"><input type="checkbox" name="tagids" value="3" />快充</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span>
                         </li>
-                        <li style="margin:10px 0">[数码]
+                        <li style="margin:10px 0" name="tagPid" value="2" >[数码]
                             <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span>
                         </li>
-                        <li style="margin:10px 0">[电脑]
+                        <li style="margin:10px 0"name="tagPid"  value="3">[电脑]
                             <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span> <span class="label-txt">文字标签</span>
                         </li>
                     </ul>
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label">项目名称</label>
+                <label class="col-sm-2 control-label" >项目名称</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" >
+                  <input type="text" class="form-control" name="name" >
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">一句话简介</label>
                 <div class="col-sm-10">
-                  <textarea class="form-control" rows="5"></textarea>
+                  <textarea class="form-control" rows="5" name="remark"></textarea>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">筹资金额（元）</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" style="width:100px;" >
+                  <input type="text" class="form-control" style="width:100px;"  name="money">
                   <label class="control-label">筹资金额不能低于100元,不能高于1000000000元</label>
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">筹资天数（天）</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" style="width:100px;" >
+                  <input type="text" class="form-control" style="width:100px;"  name="day">
                   <label class="control-label">一般10-90天，建议30天</label>
                 </div>
               </div>
@@ -262,19 +264,20 @@
                 <label class="col-sm-2 control-label">项目头图</label>
                 <div class="col-sm-10">
                   <button type="button" class="btn btn-primary btn-lg active">上传图片</button>
-                  <label class="control-label">图片上无文字,支持jpg、jpeg、png、gif格式，大小不超过2M，建议尺寸：740*457px</label>
+                  <label class="control-label" ><input type="hidden" name="headerImage" value="xxxx">图片上无文字,支持jpg、jpeg、png、gif格式，大小不超过2M，建议尺寸：740*457px</label>
                 </div>
               </div>
+              
               <div class="form-group">
                 <label class="col-sm-2 control-label">项目详情</label>
                 <div class="col-sm-10">
                   <button type="button" class="btn btn-primary btn-lg active">上传图片</button>
-                  <label class="control-label">支持jpg、jpeg、png、gif格式，大小不超过2M，建议尺寸：宽740px</label>
+                  <label class="control-label" ><input type="hidden" name="detailsImage" value="xxxx">支持jpg、jpeg、png、gif格式，大小不超过2M，建议尺寸：宽740px</label>
                 </div>
               </div>
             </form>
 		</div>
-		<div class="col-md-12 column">
+<!--		<div class="col-md-12 column">
 			<div class="page-header" style="    border-bottom-style: dashed;">
 				<h3>
 					发起人信息
@@ -307,11 +310,12 @@
               </div>
             </form>
 		</div>
+-->	
 	</div>
 </div>
                         </div>
                         <div class="panel-footer" style="text-align:center;">
-                            <button type="button" class="btn  btn-warning btn-lg" onclick="window.location.href='start-step-2.html'">下一步</button>
+                            <button id="toStartStep3" type="button" class="btn  btn-warning btn-lg" >下一步</button>
                         </div>
                     </div>
                 </div>
@@ -326,6 +330,11 @@ $('#myTab a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
 })
+
+$("#toStartStep3").click(function(){
+	$("#startStep1Form").submit();
+});
+
 	</script>
   </body>
 </html>

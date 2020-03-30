@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.atguigu.scw.vo.resp.AppResponse;
 import com.atguigu.scw.webui.service.exp.handler.TProjectServiceFeignExceptionHandler;
 import com.atguigu.scw.webui.vo.req.BaseVo;
+import com.atguigu.scw.webui.vo.resp.ProjectBaseInfoVo;
 import com.atguigu.scw.webui.vo.resp.ProjectDetailVo;
+import com.atguigu.scw.webui.vo.resp.ProjectRedisStorageVo;
 import com.atguigu.scw.webui.vo.resp.ProjectVo;
 import com.atguigu.scw.webui.vo.resp.ReturnPayConfirmVo;
 
@@ -29,6 +31,9 @@ public interface TProjectServiceFeign {
 			@PathVariable("returnId") Integer returnId);
 
 	@PostMapping("/project/create/init")
-	public AppResponse<Object> init(@RequestBody BaseVo vo);
+	public AppResponse<ProjectRedisStorageVo> init(@RequestBody BaseVo vo);
+
+	@PostMapping("/project/create/baseinfo")
+	public AppResponse<ProjectRedisStorageVo> baseinfo(@RequestBody ProjectBaseInfoVo vo);
 
 }
