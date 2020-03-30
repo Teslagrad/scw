@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.atguigu.scw.vo.resp.AppResponse;
 import com.atguigu.scw.webui.service.TMemberServiceFeign;
 import com.atguigu.scw.webui.service.TProjectServiceFeign;
+import com.atguigu.scw.webui.vo.req.BaseVo;
 import com.atguigu.scw.webui.vo.resp.ProjectDetailVo;
 import com.atguigu.scw.webui.vo.resp.ReturnPayConfirmVo;
 import com.atguigu.scw.webui.vo.resp.UserAddressVo;
@@ -28,6 +29,37 @@ public class TProjectController {
 	TProjectServiceFeign projectServiceFeign;
 	@Autowired
 	TMemberServiceFeign memberServiceFeign;
+
+	@RequestMapping("/project/startInfo")
+	public String startInfo(HttpSession session) {
+
+		UserRespVo vo = (UserRespVo) session.getAttribute("loginMember");
+		if (vo == null) {
+			session.setAttribute("preUrl", "/project/start");
+
+			return "redirect:/login";
+		}
+
+		String accessToken = vo.getAccessToken();
+
+		log.debug("##################################accessToken=={}", accessToken);
+
+		BaseVo baseVo = new BaseVo();
+		baseVo.setAccessToken(accessToken);
+
+		AppResponse<Object> resp = projectServiceFeign.init(baseVo);
+		Object data = resp.getData();
+
+		log.debug("##################################ProjectRedisStorageVo=={}", data);
+
+		return "project/start-step-1";
+	}
+
+	@RequestMapping("/project/start")
+	public String start() {
+
+		return "project/start";
+	}
 
 	// 去结算
 	@RequestMapping("/project/confirm/order/{num}")

@@ -70,7 +70,8 @@
                                     <a rel="nofollow" href="projects.html"><i class="glyphicon glyphicon-th-large"></i> 众筹项目</a>
                                 </li>
                                 <li>
-                                    <a rel="nofollow" href="start.html"><i class="glyphicon glyphicon-edit"></i> 发起众筹</a>
+                              
+                                    <a rel="nofollow" id="startProjectBtn" href="start.html" th:href="@{/project/start}"><i class="glyphicon glyphicon-edit"></i> 发起众筹</a>
                                 </li>
                                 <li>
                                     <a rel="nofollow" href="minecrowdfunding.html"><i class="glyphicon glyphicon-user"></i> 我的众筹</a>
@@ -265,6 +266,9 @@
 		$(".supportBtn").click(function(){
 			window.location.href= $(this).attr('href');
 		});
+		
+
+		
 	
 	</script>
   </body>

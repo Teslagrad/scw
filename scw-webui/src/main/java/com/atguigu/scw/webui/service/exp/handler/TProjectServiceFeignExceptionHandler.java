@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import com.atguigu.scw.vo.resp.AppResponse;
 import com.atguigu.scw.webui.service.TProjectServiceFeign;
+import com.atguigu.scw.webui.vo.req.BaseVo;
 import com.atguigu.scw.webui.vo.resp.ProjectDetailVo;
 import com.atguigu.scw.webui.vo.resp.ProjectVo;
 import com.atguigu.scw.webui.vo.resp.ReturnPayConfirmVo;
@@ -39,6 +40,15 @@ public class TProjectServiceFeignExceptionHandler implements TProjectServiceFeig
 		resp.setMsg("请求【项目服务】【确认项目回报信息】#####################################################失败");
 		log.debug("请求【项目服务】【确认项目回报信息】#####################################################失败");
 		return resp;
+	}
+
+	@Override
+	public AppResponse<Object> init(BaseVo vo) {
+		AppResponse<Object> resp = AppResponse.fail(null);
+		resp.setMsg("请求【项目服务】【项目初始化】#####################################################失败");
+		log.debug("请求【项目服务】【项目初始化】#####################################################失败");
+		return resp;
+
 	}
 
 }

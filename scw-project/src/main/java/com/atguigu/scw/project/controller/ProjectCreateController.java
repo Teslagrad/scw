@@ -53,8 +53,8 @@ public class ProjectCreateController {
 
 	@ApiOperation(value = "1-项目初始创建")
 	@PostMapping("/init")
-	public AppResponse<Object> init(BaseVo vo) {
-
+	public AppResponse<Object> init(@RequestBody BaseVo vo) {
+		log.debug("###################################################################initing...");
 		try {
 			// 校验判断用户token是否为空
 			String accessToken = vo.getAccessToken();
@@ -82,6 +82,8 @@ public class ProjectCreateController {
 			String projectToken = UUID.randomUUID().toString().replace("-", "");
 
 			bigVo.setProjectToken(projectToken);
+
+			log.debug("###################################################################bigVo...{}", bigVo);
 
 			// vo转为json
 			String bigstr = JSON.toJSONString(bigVo);// fastjson
