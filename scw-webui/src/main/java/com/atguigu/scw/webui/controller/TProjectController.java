@@ -19,6 +19,7 @@ import com.atguigu.scw.webui.vo.req.BaseVo;
 import com.atguigu.scw.webui.vo.resp.ProjectBaseInfoVo;
 import com.atguigu.scw.webui.vo.resp.ProjectDetailVo;
 import com.atguigu.scw.webui.vo.resp.ProjectRedisStorageVo;
+import com.atguigu.scw.webui.vo.resp.ProjectReturnVo;
 import com.atguigu.scw.webui.vo.resp.ReturnPayConfirmVo;
 import com.atguigu.scw.webui.vo.resp.UserAddressVo;
 import com.atguigu.scw.webui.vo.resp.UserRespVo;
@@ -35,6 +36,12 @@ public class TProjectController {
 
 	@Autowired
 	StringRedisTemplate stringRedisTemplate;
+
+	@RequestMapping("/project/startReturnInfo")
+	public String startReturnInfo(ProjectReturnVo vo, HttpSession session) {
+		log.debug("###################444444444###############4");
+		return "project/start-step-4";
+	}
 
 	@RequestMapping("/project/startBaseInfo")
 	public String startBaseInfo(ProjectBaseInfoVo vo, HttpSession session) {

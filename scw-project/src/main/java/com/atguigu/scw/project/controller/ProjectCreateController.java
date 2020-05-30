@@ -115,35 +115,25 @@ public class ProjectCreateController {
 				resp.setMsg("请求必须提速accessToken");
 				return resp;
 			}
-
 			String memberId = stringRedisTemplate.opsForValue().get(accessToken);
-
 			// 判断用户token是否存在
 			if (StringUtils.isEmpty(memberId)) {
 				AppResponse resp = AppResponse.fail(null);
 				resp.setMsg("请先登录");
 				return resp;
 			}
-
 			// 2.拿到大vo，小vo对拷大vo，再放回去
 			String bigJson = stringRedisTemplate.opsForValue()
 					.get(ProjectConstant.TEMP_PROJECT_PREFIX + vo.getProjectToken());
-
 			// json转vo
 			ProjectRedisStorageVo bigVo = JSON.parseObject(bigJson, ProjectRedisStorageVo.class);
-
 			log.debug("##############################got----保存基本信息完毕=={}");
-
 			BeanUtils.copyProperties(vo, bigVo);
-
 			bigJson = JSON.toJSONString(bigVo);
-
 			stringRedisTemplate.opsForValue().set(ProjectConstant.TEMP_PROJECT_PREFIX + vo.getProjectToken(), bigJson);
 			log.debug("大vo数据：{}", bigVo);
-
 			return AppResponse.ok(bigVo);
 		} catch (Exception e) {
-			//
 			e.printStackTrace();
 			log.debug("表单处理失败", e.getMessage());
 			return AppResponse.fail(null);

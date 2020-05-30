@@ -73,22 +73,18 @@ public class TMemberServiceImpl implements TMemberService {
 
 	@Override
 	public UserRespVo getUserByLogin(String loginacct, String password) {
-
+		
 		UserRespVo vo = new UserRespVo();
-
+		
 		TMemberExample example = new TMemberExample();
-
 		example.createCriteria().andLoginacctEqualTo(loginacct);
-
 		List<TMember> list = memberMapper.selectByExample(example);
 
 		if (list == null || list.size() == 0) {
 			throw new UserException(UserExceptionEnum.USER_UNEXISTS);
-
 		}
 
 		TMember member = list.get(0);
-
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
 		if (!encoder.matches(password, member.getUserpswd())) {
@@ -97,9 +93,7 @@ public class TMemberServiceImpl implements TMemberService {
 
 		BeanUtils.copyProperties(member, vo);
 		String accessToken = UUID.randomUUID().toString().replaceAll("-", "");
-
 		vo.setAccessToken(accessToken);
-
 		stringRedisTemplate.opsForValue().set(accessToken, member.getId().toString());
 
 		return vo;

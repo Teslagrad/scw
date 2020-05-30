@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.atguigu.scw.project.bean.TProject;
+import com.atguigu.scw.project.bean.TProjectExample;
 import com.atguigu.scw.project.bean.TProjectImages;
 import com.atguigu.scw.project.bean.TProjectImagesExample;
 import com.atguigu.scw.project.bean.TReturn;
@@ -60,7 +61,9 @@ public class ProjectInfoServiceImpl implements ProjectInfoService {
 
 	@Override
 	public List<TProject> getAllProjects() {
-		return projectMapper.selectByExample(null);
+		TProjectExample example = new TProjectExample();
+		example.createCriteria().andStatusEqualTo("1");
+		return projectMapper.selectByExample(example);
 	}
 
 	@Override

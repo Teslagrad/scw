@@ -46,22 +46,16 @@ public class ProjectInfoController {
 	@ApiOperation("[+]获取系统所有的项目")
 	@GetMapping("/all")
 	public AppResponse<List<ProjectVo>> all() {
-
 		// 1、分步查询，先查出所有项目
 		// 2、再查询这些项目图片
 		List<ProjectVo> prosVo = new ArrayList<>();
-
-		// 1、连接查询，所有的项目left join 图片表，查出所有的图片
-		// left join：笛卡尔积 A*B 1000万*6 = 6000万
-		// 大表禁止连接查询；
 		// 1.项目查出来
 		List<TProject> pros = projectInfoService.getAllProjects();
-
+		log.debug("--------------pros----------------{}", pros);
 		// 2.项目进行迭代
 		for (TProject tProject : pros) {
 			// 3.获得项目的主键
 			Integer id = tProject.getId();
-
 			// 4.项目主键作为外键查出图片
 			List<TProjectImages> images = projectInfoService.getProjectImages(id);
 			// 5.每个表查询出来的数据封装成一个个vo
@@ -75,7 +69,6 @@ public class ProjectInfoController {
 			}
 			// 6.所有vo放到集合里
 			prosVo.add(projectVo);
-
 		}
 		// 7.返回集合
 		return AppResponse.ok(prosVo);
@@ -88,17 +81,11 @@ public class ProjectInfoController {
 		TProject p = projectInfoService.getProjectInfo(projectId);
 		// 数据封装成数据返回
 		ProjectDetailVo projectVo = new ProjectDetailVo();
-
 		// 1、查出这个项目的所有图片
 		List<TProjectImages> projectImages = projectInfoService.getProjectImages(p.getId());
-
 		// 2.项目支持者统计
 		int supporterCount = projectInfoService.getSupporterCount();
-
-//		log.debug("supporterCount======================================================={}", supporterCount);
-
 		projectVo.setSupporterCount(supporterCount);
-
 		// 3.想项目图片
 		for (TProjectImages tProjectImages : projectImages) {
 			if (tProjectImages.getImgtype() == 0) {
@@ -108,11 +95,9 @@ public class ProjectInfoController {
 				detailsImage.add(tProjectImages.getImgurl());
 			}
 		}
-
 		// 4、项目的所有支持档位；
 		List<TReturn> returns = projectInfoService.getProjectReturns(p.getId());
 		projectVo.setProjectReturns(returns);
-
 		// 所有需要的属性都对拷到返回VO
 		BeanUtils.copyProperties(p, projectVo);
 		return AppResponse.ok(projectVo);
@@ -122,10 +107,8 @@ public class ProjectInfoController {
 	@GetMapping("/confirm/returns/{projectId}/{returnId}")
 	public AppResponse<ReturnPayConfirmVo> returnInfo(@PathVariable("projectId") Integer projectId,
 			@PathVariable("returnId") Integer returnId) {
-
 		// 大vo
 		ReturnPayConfirmVo vo = new ReturnPayConfirmVo();
-
 		// 部分1：部分回报数据
 		TReturn tReturn = projectInfoService.getProjectReturnById(returnId);
 		vo.setReturnId(tReturn.getId());
@@ -135,28 +118,20 @@ public class ProjectInfoController {
 		vo.setFreight(tReturn.getFreight());
 		vo.setSignalpurchase(tReturn.getSignalpurchase());
 		vo.setPurchase(tReturn.getPurchase());
-
 		// 部分2：项目数据
 		TProject project = projectInfoService.getProjectInfo(projectId);
 		vo.setProjectId(project.getId());
 		vo.setProjectName(project.getName());
 		vo.setProjectRemark(project.getRemark());
-
 		// 部分3：发起人信息
 		Integer memberid = project.getMemberid();
-		AppResponse<TMember> resp = memberServiceFeign.getMemberById(memberid);// 调用远程服务获取会员数据，发起人没存，就直接取会员数据
-
+		AppResponse<TMember> resp = memberServiceFeign.getMemberById(memberid);// 调用远程服务获取会员数据
 		TMember member = resp.getData();
-		log.debug("调用远程服务获取会员数据#####################################################################{}",
-				member.getId());
-
 		vo.setMemberId(member.getId());
 		vo.setMemberName(member.getLoginacct());
-		// 最后把三步数据往大vo封装,避免出错一个个vo.set
-
+		// 最后把三步数据往大vo封装
 		// 计算总价
-		vo.setTotalPrice(new BigDecimal(vo.getNum() * vo.getPrice() + vo.getFreight()));// 如何算上打折、优惠、会员，要单独做一个计算总价的业务
-
+		vo.setTotalPrice(new BigDecimal(vo.getNum() * vo.getPrice() + vo.getFreight()));
 		return AppResponse.ok(vo);
 	}
 

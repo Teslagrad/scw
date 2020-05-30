@@ -1,5 +1,6 @@
 package com.atguigu.scw.webui.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -127,21 +128,42 @@ public class DispatcherController {
 		// 每次判断缓存里面是否有热点信息，没有再去取
 		// redisTemplate存储的是集合
 		List<ProjectVo> data = (List<ProjectVo>) redisTemplate.opsForValue().get("projectInfo");
-		if (data == null) {
+		List<ProjectVo> allDataList = (List<ProjectVo>) redisTemplate.opsForValue().get("allProjectInfo");
+		log.debug("----------------------allDataList-------------------{}", allDataList);
+		if (data == null || allDataList == null) {
 			// 远程调用拿到热点项目数据
 			// 1.获得数据
 			AppResponse<List<ProjectVo>> resp = projectServiceFeign.all();
 			data = resp.getData();
+			if (allDataList != null) {
+				allDataList.clear();
+			} else {
+				allDataList = new ArrayList<ProjectVo>();
+			}
+			for (int i = data.size(); i > 3; i--) {
+				int index = i - 1;
+				allDataList.add(data.get(index));
+				data.remove(data.get(index));
 
-			redisTemplate.opsForValue().set("projectInfo", data, 1, TimeUnit.HOURS);// 1个小时过期
+			}
+
+			log.debug("----------------------allDataList-------------------{}", allDataList);
+			redisTemplate.opsForValue().set("projectInfo", data, 1, TimeUnit.MINUTES);// 1个小时过期
+			redisTemplate.opsForValue().set("allProjectInfo", allDataList, 1, TimeUnit.MINUTES);// 1个小时过期
 
 		}
 
-		// 放到请求域里
-
+		model.addAttribute("allProjectVoList", allDataList);
 		model.addAttribute("projectVoList", data);
+		log.debug("----------------------model-------------------{}", model.getAttribute("allProjectVoList"));
+		log.debug("----------------------model-------------------{}", model.getAttribute("projectVoList"));
 
 		return "index";
+	}
+
+	@RequestMapping("/minecrowdfunding")
+	public String minecrowdfunding() {
+		return "/member/minecrowdfunding";
 	}
 
 	// 如果Controller方法只是跳转页面，不做其他操作。可以配置mvc:view-controller标签。

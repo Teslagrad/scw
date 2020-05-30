@@ -151,99 +151,34 @@ h3.break>a {
 		<div class="col-md-12 column">
 			<div class="box ui-draggable" id="mainBox">
 				<div class="mHd" style="">
-					<div class="path">
+					<!--<div class="path">
 						<a href="projects.html">更多...</a>
-					</div>
+					</div>-->
 					<h3>
 						科技 <small style="color:#FFF;">开启智慧未来</small>
 					</h3>
 				</div>
 				<div class="mBd" style="padding-top:10px;">
 			<div class="row">
-				<div class="col-md-3">
+			
+				<div class="col-md-3" th:each="projectList:${allProjectVoList}">
 					<div class="thumbnail">
-						<img alt="300x200" src="img/product-1.jpg" th:src="@{/static/img/product-1.jpg}" />
-						<div class="caption">
+						<img alt="300x200" src="img/product-1.jpg" th:src="${projectList.headerImage}"/>
+						<div class="caption" >
 							<h3 class="break">
-								<a href="project.html">活性富氢净水直饮机</a>
+								<a href="project.html" th:text="${projectList.name}">活性富氢净水直饮机</a>
 							</h3>
                             <p>
-                                <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
-                                <div style="float:right;"><i title="截至日期" class="glyphicon glyphicon-calendar"></i> 2017-20-20 </div>
+                                <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额"  ></i> $20,000 </div>
+                                <div style="float:right;"><i title="截至日期" class="glyphicon glyphicon-calendar"></i> 2020-5-20 </div>
                             </p>
                             <br>
-								<div class="progress" style="margin-bottom: 4px;">
-                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                    <span >40% </span>
-                                  </div>
-                                </div>
-                                <div><span style="float:right;"><i class="glyphicon glyphicon-star-empty" ></i></span>  <span ><i class="glyphicon glyphicon-user" title="支持人数"></i> 12345</span> </div>
+							
+                                <div><span style="float:right;"></span>  <span ><i class="glyphicon glyphicon-user" title="支持人数"></i> 张三</span> </div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img alt="300x200" src="img/product-2.gif" th:src="@{/static/img/product-2.gif}" />
-						<div class="caption">
-							<h3 class="break">
-								<a href="project.html">酷驰触控龙头，智享厨房黑科技</a>
-							</h3>
-                            <p>
-                                <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
-                                <div style="float:right;"><i title="截至日期" class="glyphicon glyphicon-calendar"></i> 2017-20-20 </div>
-                            </p>
-                            <br>
-								<div class="progress" style="margin-bottom: 4px;">
-                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                    <span >40% </span>
-                                  </div>
-                                </div>
-                                <div><span style="float:right;"><i class="glyphicon glyphicon-star-empty" ></i></span>  <span ><i class="glyphicon glyphicon-user" title="支持人数"></i> 12345</span> </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img alt="300x200" src="img/product-3.png" th:src="@{/static/img/product-3.png}" />
-						<div class="caption">
-							<h3 class="break">
-								<a href="project.html">小熊猫鱼眼全景安防摄像机</a>
-							</h3>
-                            <p>
-                                <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
-                                <div style="float:right;"><i title="截至日期" class="glyphicon glyphicon-calendar"></i> 2017-20-20 </div>
-                            </p>
-                            <br>
-								<div class="progress" style="margin-bottom: 4px;">
-                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                    <span >40% </span>
-                                  </div>
-                                </div>
-                                <div><span style="float:right;"><i class="glyphicon glyphicon-star-empty" ></i></span>  <span ><i class="glyphicon glyphicon-user" title="支持人数"></i> 12345</span> </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img alt="300x200" src="img/product-4.jpg" th:src="@{/static/img/product-4.jpg}" />
-						<div class="caption">
-							<h3 class="break">
-								<a href="project.html">一款精致的机械表</a>
-							</h3>
-                            <p>
-                                <div style="float:left;"><i class="glyphicon glyphicon-screenshot" title="目标金额" ></i> $20,000 </div>
-                                <div style="float:right;"><i title="截至日期" class="glyphicon glyphicon-calendar"></i> 2017-20-20 </div>
-                            </p>
-                            <br>
-								<div class="progress" style="margin-bottom: 4px;">
-                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                    <span >40% </span>
-                                  </div>
-                                </div>
-                                <div><span style="float:right;"><i class="glyphicon glyphicon-star-empty" ></i></span>  <span ><i class="glyphicon glyphicon-user" title="支持人数"></i> 12345</span> </div>
-						</div>
-					</div>
-				</div>
+				
 			</div>
 				</div>
 			</div>
